@@ -1,0 +1,5319 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Manual de Identidad Visual Oficial de Danzas Guanta - Directrices, normas gráficas y recursos visuales del Patrimonio Cultural Inmaterial.">
+
+    <title>Danzas Guanta — Manual de Identidad Visual</title>
+
+    
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Custom Vanilla CSS Style (Editorial Premium & Responsive) -->
+
+    <style>
+
+        /* ==========================================================================
+
+           1. VARIABLES DEL SISTEMA DE DISEÑO (CSS Custom Properties)
+
+           ========================================================================== */
+
+        :root {
+
+            /* Tipografías */
+
+            --font-heading: 'Marcellus', serif;
+
+            --font-subheading: 'Playfair Display', serif;
+
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+
+            --font-mono: 'JetBrains Mono', monospace;
+
+
+
+            /* Modo Claro (Lino / Papel Cálido) */
+
+            --bg-primary-rgb: 250, 248, 245;      /* #FAF8F5 */
+
+            --bg-secondary-rgb: 242, 237, 228;    /* #F2EDE4 */
+
+            --bg-tertiary-rgb: 230, 222, 201;     /* #E6DEC9 */
+
+            --text-primary-rgb: 28, 26, 24;       /* #1C1A18 */
+
+            --text-secondary-rgb: 110, 104, 96;   /* #6E6860 */
+
+            --accent-gold-rgb: 197, 168, 128;     /* #C5A880 (Oro Satinado) */
+
+            --accent-gold-hover: #b3946b;
+
+            --accent-red: #c82333;                 /* Rojo Pasión */
+
+            --accent-blue: #1d4ed8;                /* Azul Fuerza */
+
+            --accent-yellow: #d69e2e;              /* Amarillo Dinamismo */
+
+            
+
+            --border-opacity: 0.15;
+
+            --shadow-opacity: 0.04;
+
+            --card-glow: rgba(197, 168, 128, 0.05);
+
+            
+
+            /* Valores Derivados */
+
+            --bg-primary: rgb(var(--bg-primary-rgb));
+
+            --bg-secondary: rgb(var(--bg-secondary-rgb));
+
+            --bg-tertiary: rgb(var(--bg-tertiary-rgb));
+
+            --text-primary: rgb(var(--text-primary-rgb));
+
+            --text-secondary: rgb(var(--text-secondary-rgb));
+
+            --accent-gold: rgb(var(--accent-gold-rgb));
+
+            --border-color: rgba(var(--text-primary-rgb), var(--border-opacity));
+
+            --border-gold: rgba(var(--accent-gold-rgb), 0.3);
+
+            
+
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+            --transition-fast: all 0.2s ease;
+
+        }
+
+
+
+        body.dark-mode {
+
+            /* Modo Oscuro (Museo / Carbón de Lujo) */
+
+            --bg-primary-rgb: 15, 14, 13;         /* #0F0E0D */
+
+            --bg-secondary-rgb: 24, 22, 20;       /* #181614 */
+
+            --bg-tertiary-rgb: 34, 31, 28;        /* #221F1C */
+
+            --text-primary-rgb: 242, 237, 228;    /* #F2EDE4 */
+
+            --text-secondary-rgb: 168, 160, 149;  /* #A8A095 */
+
+            --accent-gold-rgb: 212, 175, 55;      /* #D4AF37 (Oro Brillante) */
+
+            --accent-gold-hover: #ecc94b;
+
+            --accent-red: #e53e3e;
+
+            --accent-blue: #4299e1;
+
+            --accent-yellow: #ecc94b;
+
+            
+
+            --border-opacity: 0.1;
+
+            --shadow-opacity: 0.5;
+
+            --card-glow: rgba(212, 175, 55, 0.03);
+
+        }
+
+
+
+        /* ==========================================================================
+
+           2. RESTEOS Y ESTILOS GLOBALES
+
+           ========================================================================== */
+
+        *, *::before, *::after {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            font-size: 16px;
+
+        }
+
+
+
+        body {
+
+            background-color: var(--bg-primary);
+
+            color: var(--text-primary);
+
+            font-family: var(--font-body);
+
+            line-height: 1.6;
+
+            -webkit-font-smoothing: antialiased;
+
+            -moz-osx-font-smoothing: grayscale;
+
+            transition: var(--transition-smooth);
+
+            overflow-x: hidden;
+
+        }
+
+
+
+        /* Scrollbar Personalizada */
+
+        ::-webkit-scrollbar {
+
+            width: 8px;
+
+            height: 8px;
+
+        }
+
+        ::-webkit-scrollbar-track {
+
+            background: var(--bg-primary);
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+
+            background: var(--accent-gold);
+
+            border: 2px solid var(--bg-primary);
+
+            border-radius: 4px;
+
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+
+            background: var(--accent-gold-hover);
+
+        }
+
+
+
+        /* ==========================================================================
+
+           3. ESTRUCTURA Y MAQUETACIÓN
+
+           ========================================================================== */
+
+        .app-container {
+
+            display: flex;
+
+            min-height: 100vh;
+
+            position: relative;
+
+        }
+
+
+
+        /* Barra Lateral (Sidebar) */
+
+        .sidebar {
+
+            width: 320px;
+
+            background-color: var(--bg-secondary);
+
+            border-right: 1px solid var(--border-color);
+
+            position: fixed;
+
+            top: 0;
+
+            bottom: 0;
+
+            left: 0;
+
+            z-index: 100;
+
+            padding: 2.5rem 2rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition: var(--transition-smooth);
+
+            overflow-y: auto;
+
+        }
+
+
+
+        /* Contenido Principal */
+
+        .main-content {
+
+            flex: 1;
+
+            margin-left: 320px;
+
+            padding: 4rem 6rem;
+
+            max-width: 1400px;
+
+            width: calc(100% - 320px);
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        /* Secciones */
+
+        section {
+
+            padding: 5rem 0;
+
+            border-bottom: 1px solid var(--border-color);
+
+        }
+
+        section:last-of-type {
+
+            border-bottom: none;
+
+            padding-bottom: 8rem;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           4. TIPOGRAFÍA EDITORIAL
+
+           ========================================================================== */
+
+        h1, h2, h3, h4, h5, h6 {
+
+            font-family: var(--font-heading);
+
+            font-weight: 400;
+
+            letter-spacing: 0.05em;
+
+            line-height: 1.2;
+
+            color: var(--text-primary);
+
+        }
+
+
+
+        p {
+
+            font-weight: 300;
+
+            color: var(--text-secondary);
+
+            margin-bottom: 1.5rem;
+
+            font-size: 0.95rem;
+
+        }
+
+        
+
+        p.lead {
+
+            font-size: 1.15rem;
+
+            line-height: 1.7;
+
+            font-weight: 300;
+
+            color: var(--text-primary);
+
+            font-family: var(--font-subheading);
+
+            font-style: italic;
+
+        }
+
+
+
+        .section-label {
+
+            font-family: var(--font-body);
+
+            font-size: 0.75rem;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.3em;
+
+            color: var(--accent-gold);
+
+            display: block;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .section-title {
+
+            font-size: 2.5rem;
+
+            margin-bottom: 1.5rem;
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+
+        .section-title::after {
+
+            content: '';
+
+            display: block;
+
+            width: 60px;
+
+            height: 1px;
+
+            background-color: var(--accent-gold);
+
+            margin-top: 0.75rem;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           5. COMPONENTES DE DISEÑO EDITORIAL
+
+           ========================================================================== */
+
+        
+
+        /* Contenedor e Identidad Sidebar */
+
+        .brand-container {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1rem;
+
+            margin-bottom: 3rem;
+
+            text-decoration: none;
+
+        }
+
+
+
+        .brand-logo-svg {
+
+            width: 44px;
+
+            height: 44px;
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        .brand-text-wrapper h2 {
+
+            font-size: 1.2rem;
+
+            letter-spacing: 0.15em;
+
+            line-height: 1.1;
+
+        }
+
+
+
+        .brand-text-wrapper span {
+
+            font-size: 0.6rem;
+
+            letter-spacing: 0.54em;
+
+            text-transform: uppercase;
+
+            color: var(--text-secondary);
+
+            font-weight: 600;
+
+            display: block;
+
+            margin-top: 0.2rem;
+
+        }
+
+
+
+        /* Menú de Navegación */
+
+        .nav-menu {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.5rem;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .nav-link {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.75rem;
+
+            padding: 0.6rem 0.75rem;
+
+            color: var(--text-secondary);
+
+            text-decoration: none;
+
+            font-size: 0.85rem;
+
+            font-weight: 400;
+
+            border-radius: 4px;
+
+            transition: var(--transition-fast);
+
+            letter-spacing: 0.02em;
+
+        }
+
+
+
+        .nav-link span {
+
+            font-family: var(--font-mono);
+
+            font-size: 0.75rem;
+
+            opacity: 0.6;
+
+            width: 25px;
+
+        }
+
+
+
+        .nav-link:hover, .nav-link.active {
+
+            color: var(--text-primary);
+
+            background-color: rgba(var(--text-primary-rgb), 0.03);
+
+            transform: translateX(4px);
+
+        }
+
+
+
+        .nav-link.active {
+
+            font-weight: 600;
+
+            border-left: 2px solid var(--accent-gold);
+
+            border-radius: 0 4px 4px 0;
+
+            padding-left: calc(0.75rem - 2px);
+
+        }
+
+
+
+        /* Sidebar Footer / Switcher */
+
+        .sidebar-footer {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+            border-top: 1px solid var(--border-color);
+
+            padding-top: 2rem;
+
+        }
+
+
+
+        .theme-toggle-btn {
+
+            background: none;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 50px;
+
+            padding: 0.6rem 1.2rem;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 0.5rem;
+
+            color: var(--text-primary);
+
+            font-family: var(--font-body);
+
+            font-size: 0.75rem;
+
+            font-weight: 500;
+
+            letter-spacing: 0.1em;
+
+            text-transform: uppercase;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .theme-toggle-btn:hover {
+
+            border-color: var(--accent-gold);
+
+            background-color: rgba(var(--accent-gold-rgb), 0.05);
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        .theme-toggle-btn svg {
+
+            width: 16px;
+
+            height: 16px;
+
+        }
+
+
+
+        .theme-toggle-btn .sun-icon { display: none; }
+
+        body.dark-mode .theme-toggle-btn .sun-icon { display: block; }
+
+        body.dark-mode .theme-toggle-btn .moon-icon { display: none; }
+
+
+
+        .copyright-tag {
+
+            font-size: 0.65rem;
+
+            color: var(--text-secondary);
+
+            line-height: 1.4;
+
+            letter-spacing: 0.05em;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           6. COMPONENTES Y LÁMINAS PREMIUM
+
+           ========================================================================== */
+
+        
+
+        /* Contenedor de Láminas de Presentación */
+
+        .laminate-container {
+
+            position: relative;
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 1rem;
+
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,var(--shadow-opacity));
+
+            margin: 2.5rem 0;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .laminate-container:hover {
+
+            border-color: var(--accent-gold);
+
+            box-shadow: 0 25px 50px -20px rgba(0,0,0,calc(var(--shadow-opacity) * 1.5)), 0 0 30px var(--card-glow);
+
+        }
+
+
+
+        .laminate-frame {
+
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            overflow: hidden;
+
+            border-radius: 4px;
+
+            background-color: #050505;
+
+            cursor: zoom-in;
+
+        }
+
+
+
+        .laminate-img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+        }
+
+
+
+        .laminate-frame:hover .laminate-img {
+
+            transform: scale(1.025);
+
+        }
+
+
+
+        .laminate-caption {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-top: 1rem;
+
+            padding: 0 0.5rem;
+
+        }
+
+
+
+        .laminate-label {
+
+            font-family: var(--font-mono);
+
+            font-size: 0.7rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            color: var(--accent-gold);
+
+            font-weight: 500;
+
+        }
+
+
+
+        .laminate-desc {
+
+            font-size: 0.75rem;
+
+            color: var(--text-secondary);
+
+        }
+
+
+
+        /* Botón de Expansión Flotante */
+
+        .laminate-zoom-indicator {
+
+            position: absolute;
+
+            bottom: 1.5rem;
+
+            right: 1.5rem;
+
+            background-color: rgba(15, 14, 13, 0.75);
+
+            backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            color: #faf8f5;
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            opacity: 0;
+
+            transform: translateY(8px);
+
+            transition: var(--transition-smooth);
+
+            pointer-events: none;
+
+            z-index: 5;
+
+        }
+
+
+
+        .laminate-frame:hover .laminate-zoom-indicator {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+
+        /* ==========================================================================
+
+           7. ELEMENTOS DE LAS SECCIONES
+
+           ========================================================================== */
+
+
+
+        /* Portada */
+
+        .hero-layout {
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 4rem;
+
+            align-items: center;
+
+            min-height: calc(100vh - 8rem);
+
+        }
+
+
+
+        .hero-text-box {
+
+            padding-right: 2rem;
+
+        }
+
+
+
+        .hero-title {
+
+            font-size: clamp(3rem, 5vw, 5.5rem);
+
+            line-height: 1.05;
+
+            color: var(--text-primary);
+
+            margin-bottom: 2rem;
+
+        }
+
+
+
+        .hero-title span {
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        /* Línea de Tiempo - Historia */
+
+        .timeline-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 4rem;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .timeline {
+
+            position: relative;
+
+            padding-left: 2rem;
+
+            border-left: 1px solid var(--border-color);
+
+        }
+
+
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .timeline-item:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: calc(-2rem - 6px);
+
+            top: 6px;
+
+            width: 11px;
+
+            height: 11px;
+
+            border-radius: 50%;
+
+            background-color: var(--accent-gold);
+
+            border: 2px solid var(--bg-primary);
+
+            box-shadow: 0 0 0 2px var(--accent-gold);
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .timeline-item:hover .timeline-dot {
+
+            background-color: var(--accent-red);
+
+            box-shadow: 0 0 0 4px rgba(200, 35, 51, 0.2);
+
+        }
+
+
+
+        .timeline-year {
+
+            font-family: var(--font-heading);
+
+            font-size: 1.4rem;
+
+            color: var(--accent-gold);
+
+            margin-bottom: 0.5rem;
+
+            display: block;
+
+        }
+
+
+
+        .timeline-title {
+
+            font-size: 0.95rem;
+
+            font-weight: 600;
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .editorial-quote {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 3rem;
+
+            background-color: var(--bg-secondary);
+
+            border-radius: 8px;
+
+            border-left: 3px solid var(--accent-gold);
+
+            font-family: var(--font-subheading);
+
+            font-style: italic;
+
+            font-size: 1.35rem;
+
+            color: var(--text-primary);
+
+            line-height: 1.6;
+
+        }
+
+
+
+        .quote-author {
+
+            font-family: var(--font-body);
+
+            font-style: normal;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.15em;
+
+            margin-top: 1.5rem;
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        /* Misión y Visión */
+
+        .mv-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 3rem;
+
+        }
+
+
+
+        .mv-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 3rem;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .mv-card:hover {
+
+            border-color: var(--accent-gold);
+
+            transform: translateY(-4px);
+
+        }
+
+
+
+        /* Valores Core */
+
+        .valores-intro {
+
+            max-w-3xl;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .valores-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 2.5rem;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .valor-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .valor-card:hover {
+
+            border-color: var(--accent-gold);
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 20px 30px -15px rgba(0,0,0,var(--shadow-opacity));
+
+        }
+
+
+
+        .valor-img-box {
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            overflow: hidden;
+
+            background-color: #000;
+
+            border-bottom: 1px solid var(--border-color);
+
+        }
+
+
+
+        .valor-img-box img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.6s ease;
+
+        }
+
+
+
+        .valor-card:hover .valor-img-box img {
+
+            transform: scale(1.05);
+
+        }
+
+
+
+        .valor-content {
+
+            padding: 2rem;
+
+            flex-grow: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .valor-header {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .valor-icon {
+
+            width: 32px;
+
+            height: 32px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 4px;
+
+        }
+
+
+
+        .valor-card.tradicion .valor-icon { background: rgba(214, 158, 46, 0.1); color: var(--accent-yellow); }
+
+        .valor-card.dinamismo .valor-icon { background: rgba(29, 78, 216, 0.1); color: var(--accent-blue); }
+
+        .valor-card.excelencia .valor-icon { background: rgba(200, 35, 51, 0.1); color: var(--accent-red); }
+
+
+
+        .valor-card.tradicion { border-top: 3px solid var(--accent-yellow); }
+
+        .valor-card.dinamismo { border-top: 3px solid var(--accent-blue); }
+
+        .valor-card.excelencia { border-top: 3px solid var(--accent-red); }
+
+
+
+        .valor-title {
+
+            font-size: 1.35rem;
+
+        }
+
+
+
+        /* Sistema de Logotipo */
+
+        .logo-comparison-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 4rem;
+
+            align-items: center;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .logo-showcase-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 3rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 2rem;
+
+            min-height: 380px;
+
+        }
+
+
+
+        .logo-primary-img {
+
+            max-width: 280px;
+
+            max-height: 180px;
+
+            object-fit: contain;
+
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        /* SVG Isotipo de gran tamaño */
+
+        .vector-isotipo-container {
+
+            width: 140px;
+
+            height: 140px;
+
+            color: var(--text-primary);
+
+        }
+
+
+
+        .logo-slide-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 2rem;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           8. SIMULADOR INTERACTIVO DEL ÁREA DE PROTECCIÓN
+
+           ========================================================================== */
+
+        .sim-grid {
+
+            display: grid;
+
+            grid-template-columns: 340px 1fr;
+
+            gap: 3rem;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .sim-controls {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 2rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .sim-control-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.75rem;
+
+        }
+
+
+
+        .sim-control-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+
+        }
+
+
+
+        .sim-control-value {
+
+            font-family: var(--font-mono);
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        .sim-range-input {
+
+            width: 100%;
+
+            height: 4px;
+
+            background: var(--border-color);
+
+            border-radius: 2px;
+
+            outline: none;
+
+            -webkit-appearance: none;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .sim-range-input::-webkit-slider-thumb {
+
+            -webkit-appearance: none;
+
+            width: 16px;
+
+            height: 16px;
+
+            border-radius: 50%;
+
+            background: var(--accent-gold);
+
+            border: 2px solid var(--bg-secondary);
+
+            box-shadow: 0 0 0 1px var(--accent-gold);
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .sim-range-input::-webkit-slider-thumb:hover {
+
+            transform: scale(1.2);
+
+            background: var(--accent-gold-hover);
+
+        }
+
+
+
+        .sim-checkbox-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.75rem;
+
+            font-size: 0.8rem;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            font-weight: 500;
+
+        }
+
+
+
+        .sim-checkbox {
+
+            appearance: none;
+
+            width: 16px;
+
+            height: 16px;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 4px;
+
+            outline: none;
+
+            cursor: pointer;
+
+            position: relative;
+
+            background-color: var(--bg-primary);
+
+        }
+
+
+
+        .sim-checkbox:checked {
+
+            background-color: var(--accent-gold);
+
+            border-color: var(--accent-gold);
+
+        }
+
+
+
+        .sim-checkbox:checked::after {
+
+            content: '✓';
+
+            position: absolute;
+
+            color: var(--bg-primary);
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+        }
+
+
+
+        .sim-playground {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            position: relative;
+
+            min-height: 480px;
+
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.02);
+
+        }
+
+
+
+        /* Caja externa del contenedor del logo */
+
+        .sim-logo-wrapper {
+
+            position: relative;
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            transition: padding 0.2s ease;
+
+        }
+
+
+
+        /* Capa Rejilla Proporciones */
+
+        .sim-grid-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image: 
+
+                linear-gradient(rgba(197, 168, 128, 0.08) 1px, transparent 1px),
+
+                linear-gradient(90deg, rgba(197, 168, 128, 0.08) 1px, transparent 1px);
+
+            background-size: 20px 20px;
+
+            background-position: center;
+
+            pointer-events: none;
+
+            opacity: 0;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .sim-grid-overlay.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        /* Capa Caja de Seguridad (Zona de Protección) */
+
+        .sim-safe-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            border: 2px dashed rgba(200, 35, 51, 0.5);
+
+            background-color: rgba(200, 35, 51, 0.05);
+
+            pointer-events: none;
+
+            opacity: 0;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .sim-safe-overlay.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        .sim-safe-label {
+
+            position: absolute;
+
+            top: 8px;
+
+            left: 8px;
+
+            font-family: var(--font-mono);
+
+            font-size: 0.6rem;
+
+            color: var(--accent-red);
+
+            font-weight: 600;
+
+            letter-spacing: 0.05em;
+
+        }
+
+
+
+        /* Contenedor Interno Logo */
+
+        .sim-logo-container {
+
+            position: relative;
+
+            z-index: 10;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: transform 0.2s ease;
+
+        }
+
+
+
+        .sim-logo-svg {
+
+            color: var(--text-primary);
+
+            width: 160px;
+
+            height: 160px;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .sim-logo-text {
+
+            font-family: var(--font-heading);
+
+            font-size: 1.1rem;
+
+            margin-top: 0.5rem;
+
+            letter-spacing: 0.1em;
+
+            color: var(--accent-gold);
+
+            text-align: center;
+
+            pointer-events: none;
+
+        }
+
+
+
+        .sim-logo-sub {
+
+            font-family: var(--font-body);
+
+            font-size: 0.55rem;
+
+            font-weight: 600;
+
+            letter-spacing: 0.2em;
+
+            color: var(--text-secondary);
+
+            margin-top: 0.2rem;
+
+            text-align: center;
+
+            pointer-events: none;
+
+        }
+
+
+
+        .sim-note {
+
+            font-size: 0.75rem;
+
+            line-height: 1.5;
+
+            color: var(--text-secondary);
+
+            padding: 1rem;
+
+            border-left: 2px solid var(--accent-red);
+
+            background-color: rgba(200, 35, 51, 0.02);
+
+            border-radius: 0 4px 4px 0;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           9. USOS PROHIBIDOS
+
+           ========================================================================== */
+
+        .usos-intro {
+
+            max-w-3xl;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .usos-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 2rem;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .uso-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-top: 3px solid var(--accent-red);
+
+            border-radius: 8px;
+
+            padding: 2rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .uso-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: var(--accent-red);
+
+        }
+
+
+
+        .uso-visual-box {
+
+            aspect-ratio: 4 / 3;
+
+            background-color: rgba(200, 35, 51, 0.02);
+
+            border: 1px solid rgba(200, 35, 51, 0.1);
+
+            border-radius: 4px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .uso-badge-prohibido {
+
+            position: absolute;
+
+            top: 0.75rem;
+
+            right: 0.75rem;
+
+            background-color: var(--accent-red);
+
+            color: #faf8f5;
+
+            font-size: 0.55rem;
+
+            font-weight: 700;
+
+            padding: 0.2rem 0.5rem;
+
+            border-radius: 4px;
+
+            letter-spacing: 0.05em;
+
+        }
+
+
+
+        /* Iconografía incorrecta simulada con CSS */
+
+        .uso-logo-mock {
+
+            width: 70px;
+
+            height: 70px;
+
+            color: var(--text-secondary);
+
+            opacity: 0.5;
+
+        }
+
+
+
+        /* Aplicación de deformaciones */
+
+        .uso-visual-box.distorsion .uso-logo-mock {
+
+            transform: scaleX(1.7) scaleY(0.6);
+
+        }
+
+        .uso-visual-box.contorno .uso-logo-mock {
+
+            color: transparent;
+
+            filter: drop-shadow(0 0 1px var(--accent-red));
+
+        }
+
+        .uso-visual-box.contorno svg {
+
+            stroke: var(--accent-red);
+
+            stroke-width: 2.5;
+
+            fill: none;
+
+        }
+
+        .uso-visual-box.sombra .uso-logo-mock {
+
+            filter: drop-shadow(10px 10px 0px rgba(0,0,0,0.5));
+
+            color: var(--text-primary);
+
+        }
+
+        .uso-visual-box.grosor svg {
+
+            stroke: var(--text-primary);
+
+            stroke-width: 6px;
+
+            paint-order: stroke fill;
+
+        }
+
+        .uso-visual-box.dislocacion .uso-dislocado {
+
+            display: flex;
+
+            flex-direction: column-reverse;
+
+            align-items: center;
+
+            gap: 1.5rem;
+
+        }
+
+        .uso-visual-box.rotacion .uso-logo-mock {
+
+            transform: rotate(45deg);
+
+        }
+
+
+
+        .uso-text h5 {
+
+            font-family: var(--font-body);
+
+            font-size: 0.85rem;
+
+            font-weight: 700;
+
+            color: var(--accent-red);
+
+            margin-bottom: 0.5rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.05em;
+
+        }
+
+
+
+        .uso-text p {
+
+            font-size: 0.8rem;
+
+            line-height: 1.4;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           10. PALETA CROMÁTICA
+
+           ========================================================================== */
+
+        .color-intro {
+
+            max-w-3xl;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .color-palette-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 1.5rem;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .color-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: var(--transition-smooth);
+
+            cursor: pointer;
+
+        }
+
+
+
+        .color-card:hover {
+
+            border-color: var(--accent-gold);
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 20px 30px -15px rgba(0,0,0,var(--shadow-opacity));
+
+        }
+
+
+
+        .color-block {
+
+            height: 150px;
+
+            width: 100%;
+
+            position: relative;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .color-card:hover .color-block {
+
+            opacity: 0.95;
+
+        }
+
+
+
+        .color-copy-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background-color: rgba(15, 14, 13, 0.4);
+
+            backdrop-filter: blur(4px);
+
+            opacity: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #faf8f5;
+
+            font-size: 0.75rem;
+
+            font-weight: 600;
+
+            letter-spacing: 0.1em;
+
+            text-transform: uppercase;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .color-card:hover .color-copy-overlay {
+
+            opacity: 1;
+
+        }
+
+
+
+        .color-info {
+
+            padding: 1.5rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .color-name-box h4 {
+
+            font-size: 1.05rem;
+
+            margin-bottom: 0.2rem;
+
+        }
+
+
+
+        .color-name-box span {
+
+            font-size: 0.65rem;
+
+            text-transform: uppercase;
+
+            color: var(--text-secondary);
+
+            font-weight: 500;
+
+            letter-spacing: 0.05em;
+
+        }
+
+
+
+        .color-values {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.4rem;
+
+            border-top: 1px solid var(--border-color);
+
+            padding-top: 0.8rem;
+
+        }
+
+
+
+        .color-val-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-family: var(--font-mono);
+
+            font-size: 0.65rem;
+
+        }
+
+
+
+        .color-val-label {
+
+            color: var(--text-secondary);
+
+        }
+
+
+
+        .color-val-code {
+
+            color: var(--text-primary);
+
+            font-weight: 500;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           11. TIPOGRAFÍA Y APLICACIONES
+
+           ========================================================================== */
+
+        .typo-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 4rem;
+
+        }
+
+
+
+        .typo-showcase {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 2.5rem;
+
+        }
+
+
+
+        .typo-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 3rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+        }
+
+
+
+        .typo-title-specimen {
+
+            font-family: var(--font-heading);
+
+            font-size: 3.5rem;
+
+            line-height: 1;
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        .typo-sans-specimen {
+
+            font-family: var(--font-body);
+
+            font-size: 2.2rem;
+
+            font-weight: 600;
+
+            line-height: 1;
+
+            color: var(--accent-gold);
+
+        }
+
+
+
+        .typo-alphabet {
+
+            font-family: var(--font-mono);
+
+            font-size: 0.75rem;
+
+            letter-spacing: 0.05em;
+
+            line-height: 1.8;
+
+            color: var(--text-secondary);
+
+            border-top: 1px solid var(--border-color);
+
+            border-bottom: 1px solid var(--border-color);
+
+            padding: 1.2rem 0;
+
+        }
+
+
+
+        .typo-meta {
+
+            font-size: 0.75rem;
+
+            color: var(--text-secondary);
+
+        }
+
+
+
+        /* Grid Aplicaciones */
+
+        .apps-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 3rem;
+
+        }
+
+
+
+        .app-spec-card {
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .app-spec-card:hover {
+
+            border-color: var(--accent-gold);
+
+            transform: translateY(-4px);
+
+        }
+
+
+
+        .app-spec-content {
+
+            padding: 2.5rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1rem;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           12. CONTACTO
+
+           ========================================================================== */
+
+        .contact-layout {
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 4rem;
+
+            align-items: center;
+
+        }
+
+
+
+        .contact-info-box {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .contact-list {
+
+            list-style: none;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1.2rem;
+
+        }
+
+
+
+        .contact-item {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.2rem;
+
+        }
+
+
+
+        .contact-label {
+
+            font-size: 0.65rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            color: var(--accent-gold);
+
+            font-weight: 600;
+
+        }
+
+
+
+        .contact-value {
+
+            font-size: 1rem;
+
+            color: var(--text-primary);
+
+            font-weight: 300;
+
+        }
+
+
+
+        .contact-card-img {
+
+            max-width: 100%;
+
+            height: auto;
+
+            border-radius: 8px;
+
+            border: 1px solid var(--border-color);
+
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,var(--shadow-opacity));
+
+        }
+
+
+
+        /* ==========================================================================
+
+           13. LIGHTBOX INTERACTIVO (MODAL DE LÁMINAS)
+
+           ========================================================================== */
+
+        .lightbox {
+
+            position: fixed;
+
+            inset: 0;
+
+            background-color: rgba(15, 14, 13, 0.95);
+
+            backdrop-filter: blur(12px);
+
+            z-index: 2000;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            opacity: 0;
+
+            transition: opacity 0.3s ease;
+
+        }
+
+
+
+        .lightbox.active {
+
+            display: flex;
+
+            opacity: 1;
+
+        }
+
+
+
+        .lightbox-wrapper {
+
+            position: relative;
+
+            max-width: 90vw;
+
+            max-height: 85vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 1.5rem;
+
+        }
+
+
+
+        .lightbox-content {
+
+            max-width: 100%;
+
+            max-height: 80vh;
+
+            object-fit: contain;
+
+            border-radius: 6px;
+
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255,255,255,0.2);
+
+            border: 1px solid rgba(255,255,255,0.05);
+
+            transform: scale(0.95);
+
+            transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+
+        }
+
+
+
+        .lightbox.active .lightbox-content {
+
+            transform: scale(1);
+
+        }
+
+
+
+        .lightbox-close-btn {
+
+            position: absolute;
+
+            top: -3.5rem;
+
+            right: 0;
+
+            background: none;
+
+            border: none;
+
+            color: #faf8f5;
+
+            font-size: 2rem;
+
+            cursor: pointer;
+
+            width: 44px;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: rgba(255,255,255,0.05);
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .lightbox-close-btn:hover {
+
+            background-color: rgba(255,255,255,0.15);
+
+            color: var(--accent-gold);
+
+            transform: rotate(90deg);
+
+        }
+
+
+
+        .lightbox-caption {
+
+            color: #faf8f5;
+
+            font-family: var(--font-body);
+
+            font-size: 0.85rem;
+
+            letter-spacing: 0.05em;
+
+            text-align: center;
+
+            font-weight: 300;
+
+        }
+
+
+
+        /* ==========================================================================
+
+           14. NOTIFICACIONES TOAST
+
+           ========================================================================== */
+
+        .toast {
+
+            position: fixed;
+
+            bottom: 2.5rem;
+
+            right: 2.5rem;
+
+            background-color: var(--bg-secondary);
+
+            border: 1px solid var(--accent-gold);
+
+            border-radius: 6px;
+
+            padding: 1rem 1.8rem;
+
+            box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.25);
+
+            z-index: 3000;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.8rem;
+
+            transform: translateY(100px);
+
+            opacity: 0;
+
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+
+            pointer-events: none;
+
+        }
+
+
+
+        .toast.visible {
+
+            transform: translateY(0);
+
+            opacity: 1;
+
+        }
+
+
+
+        .toast-ping {
+
+            width: 8px;
+
+            height: 8px;
+
+            background-color: var(--accent-gold);
+
+            border-radius: 50%;
+
+            animation: pulse-ping 1.5s infinite;
+
+        }
+
+
+
+        .toast-text {
+
+            font-size: 0.8rem;
+
+            font-weight: 500;
+
+            color: var(--text-primary);
+
+            letter-spacing: 0.02em;
+
+        }
+
+
+
+        @keyframes pulse-ping {
+
+            0% { transform: scale(0.9); opacity: 1; }
+
+            50% { transform: scale(1.4); opacity: 0.4; }
+
+            100% { transform: scale(0.9); opacity: 1; }
+
+        }
+
+
+
+        /* ==========================================================================
+
+           15. RESPONSIVIDAD MÓVIL
+
+           ========================================================================== */
+
+        
+
+        /* Botón hamburguesa móvil */
+
+        .mobile-header-bar {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            height: 64px;
+
+            background-color: var(--bg-secondary);
+
+            border-bottom: 1px solid var(--border-color);
+
+            z-index: 1000;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 1.5rem;
+
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+
+        }
+
+
+
+        .hamburger-btn {
+
+            background: none;
+
+            border: none;
+
+            color: var(--text-primary);
+
+            cursor: pointer;
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 4px;
+
+            transition: var(--transition-fast);
+
+        }
+
+
+
+        .hamburger-btn:hover {
+
+            background-color: rgba(var(--text-primary-rgb), 0.05);
+
+        }
+
+
+
+        .hamburger-btn svg {
+
+            width: 22px;
+
+            height: 22px;
+
+        }
+
+
+
+        @media (max-width: 1024px) {
+
+            .mobile-header-bar {
+
+                display: flex;
+
+            }
+
+
+
+            .sidebar {
+
+                transform: translateX(-100%);
+
+                width: 280px;
+
+                box-shadow: 20px 0 40px rgba(0,0,0,0.25);
+
+            }
+
+
+
+            .sidebar.open {
+
+                transform: translateX(0);
+
+            }
+
+
+
+            .main-content {
+
+                margin-left: 0;
+
+                width: 100%;
+
+                padding: 6rem 2rem 4rem 2rem;
+
+            }
+
+
+
+            .hero-layout {
+
+                grid-template-columns: 1fr;
+
+                gap: 2rem;
+
+                text-align: center;
+
+                min-height: auto;
+
+                padding: 2rem 0;
+
+            }
+
+
+
+            .hero-text-box {
+
+                padding-right: 0;
+
+            }
+
+
+
+            .timeline-grid, .mv-grid, .valores-grid, .logo-comparison-grid, .sim-grid, .usos-grid, .color-palette-grid, .typo-grid, .apps-grid, .contact-layout {
+
+                grid-template-columns: 1fr;
+
+                gap: 2rem;
+
+            }
+
+
+
+            .color-palette-grid {
+
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+
+            }
+
+
+
+            .editorial-quote {
+
+                padding: 2rem;
+
+                font-size: 1.15rem;
+
+            }
+
+
+
+            .logo-showcase-card {
+
+                min-height: 280px;
+
+                padding: 2rem;
+
+            }
+
+
+
+            .sim-playground {
+
+                min-height: 360px;
+
+            }
+
+
+
+            .contact-info-box {
+
+                order: 2;
+
+            }
+
+            
+
+            .contact-img-box {
+
+                order: 1;
+
+                text-align: center;
+
+            }
+
+
+
+            .contact-card-img {
+
+                max-width: 280px;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 640px) {
+
+            html {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .main-content {
+
+                padding: 5rem 1.2rem 3rem 1.2rem;
+
+            }
+
+
+
+            .section-title {
+
+                font-size: 2rem;
+
+            }
+
+
+
+            .logo-slide-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+
+        /* ==========================================================================
+
+           16. LOGO OFICIAL ADAPTATIVO (SVG) Y ACCESIBILIDAD DE USOS
+
+           ========================================================================== */
+
+        .danzas-guanta-logo-svg {
+
+            display: inline-block;
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+        /* Colores del cuerpo del logo que cambian con el tema */
+
+        .danzas-guanta-logo-svg .dg-body,
+
+        .danzas-guanta-logo-svg .dg-text {
+
+            fill: var(--text-primary);
+
+            transition: fill var(--transition-smooth);
+
+        }
+
+        .danzas-guanta-logo-svg .dg-stroke-body {
+
+            stroke: var(--text-primary);
+
+            stroke-width: 9.13;
+
+            stroke-miterlimit: 22.9256;
+
+            transition: stroke var(--transition-smooth);
+
+        }
+
+        /* Colores cromáticos fijos del tricolor nacional venezolano */
+
+        .danzas-guanta-logo-svg .dg-yellow {
+
+            fill: #F4CE2D;
+
+        }
+
+        .danzas-guanta-logo-svg .dg-red {
+
+            fill: #E33439;
+
+        }
+
+        .danzas-guanta-logo-svg .dg-blue {
+
+            fill: #3B417B;
+
+        }
+
+        /* Animaciones para las imágenes de usos prohibidos */
+
+        .uso-img {
+
+            max-width: 85%;
+
+            max-height: 85%;
+
+            object-fit: contain;
+
+            transition: var(--transition-smooth);
+
+            pointer-events: none;
+
+        }
+
+        .uso-visual-box:hover .uso-img {
+
+            transform: scale(1.06);
+
+        }
+
+    
+        /* Clase para láminas en formato vertical (Retrato) */
+        .laminate-frame.portrait {
+            aspect-ratio: 1 / 1.414; /* Proporción estándar A4/Carta */
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- ==========================================================================
+
+       CABECERA MÓVIL (Solo visible en pantallas medianas/pequeñas)
+
+       ========================================================================== -->
+
+    <header class="mobile-header-bar">
+        <div class="brand-text-wrapper">
+            <h2 style="font-size:0.95rem; font-family:var(--font-heading); letter-spacing:0.1em; line-height:1; margin:0;">DANZAS GUANTA</h2>
+            <span style="font-size:0.55rem; letter-spacing:0.46em; text-transform:uppercase; color:var(--text-secondary); font-weight:600; display:block; margin-top:0.2rem;">Patrimonio Cultural</span>
+        </div>
+
+        <button class="hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menú">
+
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+
+            </svg>
+
+        </button>
+
+    </header>
+
+
+
+    <div class="app-container">
+
+        
+
+        <!-- ==========================================================================
+
+           BARRA LATERAL DE NAVEGACIÓN (Sidebar)
+
+           ========================================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div>
+
+                <!-- Identidad Institucional -->
+                <a href="#portada" class="brand-container" onclick="closeSidebar()">
+                    <div class="brand-text-wrapper">
+                        <h2>DANZAS GUANTA</h2>
+                        <span>Patrimonio Cultural</span>
+                    </div>
+                </a>
+
+
+
+                <!-- Navegación por Capítulos (Estilo Editorial) -->
+
+                <nav class="nav-menu">
+
+                    <a href="#portada" class="nav-link active" onclick="closeSidebar()"><span>I.</span> Portada</a>
+
+                    <a href="#historia" class="nav-link" onclick="closeSidebar()"><span>II.</span> Historia</a>
+
+                    <a href="#filosofia" class="nav-link" onclick="closeSidebar()"><span>III.</span> Misión & Visión</a>
+
+                    <a href="#valores" class="nav-link" onclick="closeSidebar()"><span>IV.</span> Valores Core</a>
+
+                    <a href="#simbolo" class="nav-link" onclick="closeSidebar()"><span>V.</span> Símbolo de Marca</a>
+
+                    <a href="#proteccion" class="nav-link" onclick="closeSidebar()"><span>VI.</span> Área de Seguridad</a>
+
+                    <a href="#usos-incorrectos" class="nav-link" onclick="closeSidebar()"><span>VII.</span> Usos Prohibidos</a>
+
+                    <a href="#color" class="nav-link" onclick="closeSidebar()"><span>VIII.</span> Paleta Cromática</a>
+
+                    <a href="#tipografia" class="nav-link" onclick="closeSidebar()"><span>IX.</span> Tipografía</a>
+
+                    <a href="#aplicaciones" class="nav-link" onclick="closeSidebar()"><span>X.</span> Aplicaciones</a>
+
+                    <a href="#contacto" class="nav-link" onclick="closeSidebar()"><span>XI.</span> Canales de Contacto</a>
+
+                    <a href="#contraportada" class="nav-link" onclick="closeSidebar()"><span>XII.</span> Contraportada</a>
+
+                </nav>
+
+            </div>
+
+
+
+            <!-- Controles y Metadata de la Institución -->
+
+            <div class="sidebar-footer">
+
+                <button class="theme-toggle-btn" onclick="toggleDarkMode()">
+
+                    <!-- Icono Sol (Modo Oscuro) -->
+
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                        <circle cx="12" cy="12" r="5" />
+
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 18.36l1.42-1.42M18.36 4.22l1.42-1.42" />
+
+                    </svg>
+
+                    <!-- Icono Luna (Modo Claro) -->
+
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+
+                    </svg>
+
+                    <span id="theme-status-text">Modo Oscuro</span>
+
+                </button>
+
+                <div class="copyright-tag">
+
+                    <p>Patrimonio Cultural Inmaterial del Estado Anzoátegui.</p>
+
+                    <p style="margin-top:0.4rem; opacity:0.6;">© 2026 Danzas Guanta.</p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ==========================================================================
+
+           CONTENEDOR CENTRAL DE CONTENIDOS (Scrollable)
+
+           ========================================================================== -->
+
+        <main class="main-content">
+
+
+
+            <!-- SECCIÓN I: PORTADA -->
+
+            <section id="portada">
+
+                <div class="hero-layout">
+
+                    <div class="hero-text-box">
+
+                        <span class="section-label">Normativa Gráfica de Marca</span>
+
+                        <h1 class="hero-title">Manual de <span>Identidad Visual</span></h1>
+
+                        <p class="lead" style="margin-bottom: 2rem;">
+
+                            Directrices de reproducción para la preservación, estandarización y proyección de la marca gráfica de Danzas Guanta.
+
+                        </p>
+
+                        <p>
+
+                            Declarada <strong>Patrimonio Cultural Inmaterial del Municipio Guanta</strong>, la institución resguarda más de 45 años de historia cultural y dancística tradicional. Este documento técnico define los parámetros gráficos obligatorios que norman su proyección institucional.
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <!-- Portada Oficial del Manual en PDF/Física -->
+
+                        <div class="laminate-container">
+
+                            <div class="laminate-frame" portrait onclick="openLightbox(this)" style="aspect-ratio: 9/16; height: auto; background-color: transparent;">
+                        <img src="pagina_1_portada_manual.png" alt="Lámina de Portada Oficial" class="laminate-img zoomable" style="width: 100%; height: 100%; object-fit: contain;">
+
+                                <div class="laminate-zoom-indicator">
+
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+                            <div class="laminate-caption">
+
+                                <span class="laminate-label">Lámina 01</span>
+
+                                <span class="laminate-desc">Portada Oficial del Manual</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN II: NUESTRA HISTORIA -->
+
+            <section id="historia">
+
+                <span class="section-label">Capítulo II</span>
+
+                <h3 class="section-title">Nuestra Historia</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    Nacida en el oriente venezolano, la agrupación ha delineado el folclore de la región a través de la danza académica y tradicional, convirtiéndose en el epicentro formativo de generaciones de bailarines.
+
+                </p>
+
+
+
+                <div class="timeline-grid">
+
+                    <!-- Cronología Histórica -->
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <span class="timeline-year">1980</span>
+
+                            <h4 class="timeline-title">Fundación de la Escuela</h4>
+
+                            <p>El 25 de mayo de 1980 inicia la enseñanza formal dancística del folklore en Guanta, Estado Anzoátegui, estructurando una metodología para la difusión folclórica.</p>
+
+                        </div>
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <span class="timeline-year">2005</span>
+
+                            <h4 class="timeline-title">Evolución y Proyección Nacional</h4>
+
+                            <p>Se consolida a nivel nacional con premios significativos. La agrupación expande su investigación de la raíz tradicional con técnicas modernas de movimiento.</p>
+
+                        </div>
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <span class="timeline-year">2025</span>
+
+                            <h4 class="timeline-title">Declaración de Patrimonio</h4>
+
+                            <p>El Consejo Legislativo formaliza la declaración de Danzas Guanta como <strong>Patrimonio Cultural Inmaterial</strong>, garantizando su resguardo histórico y metodológico.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Cita Editorial -->
+
+                    <div class="editorial-quote">
+
+                        <p>«El folklore no es un elemento inerte del pasado; es un movimiento vivo en constante dinamismo que teje la identidad, memoria y tradición del oriente venezolano.»</p>
+
+                        <span class="quote-author">Dirección de Danzas Guanta</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Diapositiva de Historia Oficial -->
+
+                <div class="laminate-container">
+
+                    <div class="laminate-frame" portrait onclick="openLightbox(this)">
+
+                        <img src="pagina_2_nuestra_historia.png" alt="Lámina de Nuestra Historia" class="laminate-img zoomable">
+
+                        <div class="laminate-zoom-indicator">
+
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="laminate-caption">
+
+                        <span class="laminate-label">Lámina 02</span>
+
+                        <span class="laminate-desc">Sección de Historia del Manual</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN III: FILOSOFÍA DE LA MARCA (MISIÓN Y VISIÓN) -->
+
+            <section id="filosofia">
+
+                <span class="section-label">Capítulo III</span>
+
+                <h3 class="section-title">Misión & Visión</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3rem;">
+
+                    La orientación estratégica de la institución se cimienta en el equilibrio perfecto entre la preservación estricta de la raíz folclórica y el rigor de la expresión corporal contemporánea.
+
+                </p>
+
+
+
+                <div class="mv-grid">
+
+                    <!-- Visión -->
+
+                    <div class="mv-card">
+
+                        <span class="section-label" style="color: var(--accent-gold);">Proyección de Futuro</span>
+
+                        <h4 style="font-size:1.8rem; margin-bottom:1.5rem;">Visión</h4>
+
+                        <p>Consolidarnos como la institución dancística referencial e insignia de la tradición oriental de Venezuela, llevando la elegancia, técnica e identidad de nuestras danzas a escenarios internacionales de primer orden.</p>
+
+                        
+
+                        <div class="laminate-container" style="margin-top: 2rem; margin-bottom: 0; padding:0.5rem;">
+
+                            <div class="laminate-frame" portrait onclick="openLightbox(this)">
+
+                                <img src="pagina_3_vision.png" alt="Lámina de Visión" class="laminate-img zoomable">
+
+                                <div class="laminate-zoom-indicator">
+
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Misión -->
+
+                    <div class="mv-card">
+
+                        <span class="section-label" style="color: var(--accent-gold);">Propósito Institucional</span>
+
+                        <h4 style="font-size:1.8rem; margin-bottom:1.5rem;">Misión</h4>
+
+                        <p>Salvaguardar la memoria dancística y las raíces culturales de Guanta a través de la formación académica integral, sensibilizando a las nuevas generaciones y proyectando la danza como motor de cohesión social.</p>
+
+                        
+
+                        <div class="laminate-container" style="margin-top: 2rem; margin-bottom: 0; padding:0.5rem;">
+
+                            <div class="laminate-frame" portrait onclick="openLightbox(this)">
+
+                                <img src="pagina_4_mision.png" alt="Lámina de Misión" class="laminate-img zoomable">
+
+                                <div class="laminate-zoom-indicator">
+
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN IV: VALORES CORE -->
+
+            <section id="valores">
+
+                <span class="section-label">Capítulo IV</span>
+
+                <h3 class="section-title">Valores Core</h3>
+
+                <div class="valores-intro">
+
+                    <p>Tres pilares estructurales norman el comportamiento ético, artístico y formativo de Danzas Guanta, garantizando la excelencia técnica sin comprometer el alma popular del folklore.</p>
+
+                </div>
+
+
+
+                <div class="valores-grid">
+
+                    <!-- Tradición -->
+
+                    <div class="valor-card tradicion">
+
+                        <div class="valor-img-box">
+
+                            <img src="tradicion.png" alt="Ilustración de Tradición">
+
+                        </div>
+
+                        <div class="valor-content">
+
+                            <div class="valor-header">
+
+                                <div class="valor-icon">T</div>
+
+                                <h4 class="valor-title">Tradición</h4>
+
+                            </div>
+
+                            <p style="font-size: 0.85rem; margin-bottom: 0;">Resguardo de nuestra historia, costumbres e identidad cultural, honrando de manera responsable las manifestaciones autóctonas orientales.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Dinamismo -->
+
+                    <div class="valor-card dinamismo">
+
+                        <div class="valor-img-box">
+
+                            <img src="dinamismo.png" alt="Ilustración de Dinamismo">
+
+                        </div>
+
+                        <div class="valor-content">
+
+                            <div class="valor-header">
+
+                                <div class="valor-icon">D</div>
+
+                                <h4 class="valor-title">Dinamismo</h4>
+
+                            </div>
+
+                            <p style="font-size: 0.85rem; margin-bottom: 0;">El folklore como un cuerpo vibrante, vivo y en constante movimiento. Impulsamos una coreografía enérgica y fluida que trasciende el tiempo.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Excelencia -->
+
+                    <div class="valor-card excelencia">
+
+                        <div class="valor-img-box">
+
+                            <img src="excelencia.png" alt="Ilustración de Excelencia">
+
+                        </div>
+
+                        <div class="valor-content">
+
+                            <div class="valor-header">
+
+                                <div class="valor-icon">E</div>
+
+                                <h4 class="valor-title">Excelencia</h4>
+
+                            </div>
+
+                            <p style="font-size: 0.85rem; margin-bottom: 0;">Rigurosidad técnica en la puesta en escena, vestuario y expresión académica para proyectar el arte dancístico folclórico con el máximo rigor profesional.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Diapositiva de Valores Oficial -->
+
+                <div class="laminate-container">
+
+                    <div class="laminate-frame" portrait onclick="openLightbox(this)">
+
+                        <img src="pagina_5_valores.png" alt="Lámina de Valores Core" class="laminate-img zoomable">
+
+                        <div class="laminate-zoom-indicator">
+
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="laminate-caption">
+
+                        <span class="laminate-label">Lámina 03</span>
+
+                        <span class="laminate-desc">Diapositiva de Valores Core en el Manual</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN V: SÍMBOLO Y LOGOTIPO -->
+
+            <section id="simbolo">
+
+                <span class="section-label">Capítulo V</span>
+
+                <h3 class="section-title">Símbolo e Imagotipo</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    El imagotipo oficial es una síntesis visual de la silueta de una bailarina en plena ejecución coreográfica (faldeo tradicional). Su trazo integra de manera armónica el tricolor venezolano, anclando la marca a su raíz geográfica con finura y elegancia.
+
+                </p>
+
+
+
+                <div class="logo-comparison-grid">
+
+                    <!-- Versión Vectorial en SVG -->
+
+                    <div class="logo-showcase-card">
+
+                        <span class="section-label" style="font-size:0.6rem; margin-bottom:0;">Símbolo Vectorial (SVG)</span>
+
+                        <div class="vector-isotipo-container" style="width: 150px; height: 150px;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 6489.85 4200" class="danzas-guanta-logo-svg">
+
+  <g id="_2424933851312">
+
+   <path class="dg-body" d="M2801.09 2674.21c-10.35,-0.7 -12.07,0.02 -17.74,-6.67 -33.67,-1.77 -151.22,-99.91 -173.15,-118.3 -8.02,-6.72 -11.56,-11.18 -19.65,-17.47l-55.44 -53.3c-54.78,-59.68 -139.22,-185.83 -176.64,-261.08 -30.37,-61.04 -45.34,-84.42 -69.75,-150.55 -5.17,-13.99 -11.66,-43.54 -18.21,-53.39 0,12.38 -0.26,24.98 -0.11,37.32l6.14 105.28c2.55,20.57 5.82,42.95 10.92,63.37 12.26,49.18 37.43,115.08 52.57,175.58 9.64,38.57 19.7,84 25.22,126 19.87,151.55 -10.85,258.08 -8.43,276.15 8.67,64.87 4.12,61.19 21.42,130.01 10.57,42.07 17.98,81.33 30.56,120.66 50.63,158.3 96.29,283.77 170.34,431.87 89.39,178.78 203.92,349.21 302.36,525.35l242.36 439.43c22.86,45.73 27.85,49.57 49.02,102.19 35.16,87.35 88.26,245.55 111.58,339.42 16.61,66.87 26.38,123.47 33.56,191.92l8.36 142.86c-0.06,12.13 -0.47,25.22 -0.11,37.25 0.43,14.11 2.88,19.97 2.78,37.02 -0.67,116.65 5.28,247.29 5.28,371.43l-2.66 74.29c11.07,-2.96 5.62,-0.48 8.76,-9.82 9.15,-27.37 66.74,-152.59 85.01,-193.55 65.89,-147.69 154.79,-404.65 181.8,-563.65 4.78,-28.17 11.08,-70.13 10.9,-100.53 -0.11,-17.1 2.92,-22 2.92,-37.08l-5.93 -68.56c-21.38,-148.84 -98.53,-363.19 -182.67,-488.51 -31.66,-47.16 -78.59,-288.81 -92.6,-358.4 -22.26,-110.5 -20.36,-271.72 -18.9,-389.85 0.19,-15.05 2.83,-18.35 2.86,-34.29 0.03,-24.81 -0.22,-49.66 -0.18,-74.47 0.02,-15.93 2.66,-19.23 2.85,-34.29 0.79,-64.87 8.16,-121.73 7.81,-180.53l4.22 -70.06c3,-19.85 -2.43,-193.96 -4.34,-218.92 -8.72,-113.64 -22.6,-276.74 -83.65,-364.68 -12.71,-18.31 -21.98,-24.18 -34.79,-39.49 -48.44,-57.95 -91.24,-89 -145.89,-135.31 -48.57,-41.15 -87.76,-68.76 -137.61,-106.46 -33.44,-25.29 -158.12,-112.29 -186.84,-112.93 0,20.42 51,252.15 57.64,305.81 2.83,22.88 1.53,47.04 4.91,69.38 2.79,18.46 0.27,108.12 -4.77,133.61 -0.15,0.72 -0.4,1.5 -0.56,2.12l-1.51 3.87z"/>
+
+   <path class="dg-red" d="M2277.26 1978.23c1.4,6.12 2.05,6.13 2.66,13.28 6.56,9.85 13.05,39.39 18.2,53.39 24.42,66.12 39.39,89.5 69.75,150.55 37.43,75.25 121.87,201.39 176.64,261.07l55.44 53.3c8.09,6.29 11.62,10.75 19.64,17.47 21.94,18.39 139.49,116.54 173.15,118.31 5.68,6.68 7.39,5.96 17.74,6.66 -2.15,-8.29 -70.08,-123.59 -83.37,-155.5 -21.37,-51.31 -24.31,-69.74 -40.32,-118.86 -52.18,-160.21 -74.88,-318.45 -45.37,-489.06 10.82,-62.57 31.98,-124.06 60.26,-178.5l10.83 -18.35c5.91,-8.13 4.65,-3.02 9.33,-11.91l8.72 -22.77c19.78,-47.8 90.86,-120.57 127.68,-149.73l295.64 -233.77c72.85,-54.94 144.8,-121.36 209.08,-186.21 3.93,-3.97 6.45,-6.91 10.73,-10.49 20.86,-17.43 78.69,-82.6 96.26,-105.36 13.72,-17.77 28.61,-30.35 44.23,-45.97l453.68 -474.83c8.76,-8.69 12.23,-15.11 21.15,-23.93 74.12,-73.29 59.02,-60.78 140.8,-127.15 33.87,-27.5 64.11,-52.08 101.04,-76.71 34.01,-22.67 49.65,-29.62 83,-49.66l23.22 -13.69c3.98,-3.64 1.3,-0.15 3.05,-4.04 0.57,-0.44 1.35,-1 1.74,-1.28 0.41,-0.26 1.25,-0.9 1.75,-1.24l92.58 -45.79c33.13,-13.71 69.64,-25.44 107.57,-33.24 74.32,-15.3 120.82,-15.25 195.44,-11.67 10.78,0.52 21.14,0.94 31.6,2.82 7.85,1.42 25.15,7.5 29.77,0.66 -17.9,-12.69 -38.39,-15.45 -61.43,-19.82 -56.87,-5.22 -103.81,-21.06 -159.92,-1.85 -119.71,-13.87 -306.99,82.92 -393.13,131.35 -105.56,59.34 -198.81,132.89 -289.18,209.63l-150.88 146.21c-29.55,26.17 -71.99,77.85 -97.46,101.45 -25.15,23.28 -100.6,113.81 -126.97,138.41 -14.28,13.3 -20.75,20.89 -32.24,34.08l-201.48 196.46c-109.04,100.86 -279.13,183.19 -411.41,251.8 -239.82,124.43 -487.32,221.35 -562.25,498.87 -19.33,71.55 -19.51,205.33 -36.95,225.59z"/>
+
+   <path class="dg-body" d="M920.82 1837.16c17.84,-32.06 38.83,-71.26 42.4,-77.24l77.16 -111.19c4.28,-4.76 5.83,-5.59 10.12,-11.1 5.04,-6.48 5.29,-7.13 11.03,-12.85l59.85 -59.53c84.87,-70.96 124.29,-113.08 226.52,-174.06 133.92,-79.88 276.53,-129.16 438.57,-129.16 136.58,0 147.14,-0.95 280.54,27.19 15.47,3.27 44.15,12.61 61.68,12.61 0,-39.1 2.95,-44.79 17.05,-78.45 27.22,-64.97 44.28,-90.72 124.3,-122.42 41.11,-16.28 80.95,-28.04 127.25,-37.23 30.76,-6.11 117.17,-21.88 145.24,-21.88 -13.49,-8.56 -88.41,-10.5 -106.2,-10.53 -16.41,-0.02 -20.55,-2.8 -36.96,-2.83 -53.61,-0.07 -99.3,-2.57 -153.96,-2.57l-475.63 7.2c-81.97,10.63 -167.97,17.18 -245.62,48.85 -39.98,16.3 -156.7,82.28 -188.32,106.15 -23.57,17.79 -43.11,34.65 -64.67,54.7l-30.48 27.87c-22.97,22.11 -74.34,65.17 -91.31,86.44 -17.63,22.09 -37.95,38.98 -55.7,61.02 -24.13,29.95 -30.25,34.15 -52.15,67.24 -51.44,77.71 -101,132.22 -132.21,223.27 -4.15,12.12 -10.07,30.7 -14.74,49.63 -8.22,33.24 -30.05,180.06 26.24,78.84z"/>
+
+   <path class="dg-body" d="M2892.73 500.67c0,125.69 42.82,179.95 -23.85,313.06 -8.32,16.61 -20.03,36.6 -32.53,49.72 -11.95,12.55 -1.31,4.78 -19.76,20.03 -24.07,19.89 -32.41,31.96 -68.73,55.96l-49.91 32.33c-51.66,30.64 -97.45,41.03 -100.73,42.84 -4.3,2.37 -3.18,0.12 -5,5.05 -4.25,11.48 -1.21,2.96 0.72,6.28 4.96,10.12 19.19,6.86 36.35,4.53 14.05,-1.9 29.23,-0.68 45.76,-2.01 95.77,-7.66 202.88,-46.01 280.23,-101.79l51.97 -43.54c4.64,-5.6 4.97,-7.26 10.77,-13.09 21.14,-21.26 62.37,-73.07 68.36,-98.77 6.86,3.29 22.38,8.96 30.82,11.62 88.16,27.78 155.18,-43.47 186.74,-107.11 47.42,-95.62 55.69,-152.57 55.69,-260 0,-70.15 -30.68,-154.43 -66.93,-187.75 -135.36,-124.47 -399.98,1.8 -399.98,272.65z"/>
+
+   <path class="dg-yellow" d="M2225.47 1681.2c7.75,-34.93 10.41,-80.85 16.27,-117.71 18.71,-117.41 55.46,-185.82 147.18,-256.08 127.17,-97.42 400.68,-151.01 579.56,-226.88 115.8,-49.12 238.04,-121.11 328.7,-207.25l36.57 -32.36c23.55,-19.75 45.16,-43.04 65.44,-67.22 9.44,-11.26 19.72,-24.46 25.58,-39.58 -19.39,5.73 -65.09,43.13 -82.57,56.86 -27.73,21.77 -51.77,42.09 -79.96,63.3 -28.14,21.17 -55.58,38.63 -86.17,57.09 -286.2,172.78 -568.9,123.99 -806.3,193.84 -37.07,10.9 -72.84,21.9 -103.99,39.26 -29.42,16.4 -59.02,38.65 -74.38,68.88l-31.03 75.08c-9.46,36.59 -1.42,126.66 3.56,166.51 5.25,41.94 12.38,82.39 20.64,122.61 3.94,19.16 9.13,37.6 14.76,56.87 4.43,15.14 12.01,39.59 26.12,46.79z"/>
+
+   <path class="dg-blue" d="M2266.64 1939.94c2.99,4.32 3.77,13.04 4.54,17.88 2.15,13.58 0.75,10.53 6.08,20.4 17.44,-20.27 17.62,-154.04 36.95,-225.59 74.93,-277.52 322.43,-374.44 562.25,-498.87 132.28,-68.62 302.37,-150.94 411.41,-251.8l201.48 -196.46c11.49,-13.19 17.96,-20.78 32.24,-34.08 26.38,-24.6 101.82,-115.12 126.97,-138.41 25.47,-23.6 67.91,-75.28 97.46,-101.45l150.88 -146.21c90.37,-76.74 183.62,-150.29 289.18,-209.63 86.14,-48.42 273.42,-145.22 393.13,-131.35 56.11,-19.21 103.06,-3.37 159.92,1.85 23.04,4.37 43.53,7.13 61.43,19.82 8.66,9.68 27.58,12.2 42.05,17.81l7.95 0.35c-25.17,-37.64 -140.96,-68.02 -200.83,-77.78 -87.15,-14.2 -174.4,-3.3 -249.63,17.24 -73.55,20.06 -177.67,66.18 -244.08,106.1 -142.81,85.85 -220.93,144.23 -347.67,246.58l-75.34 65.27c-7.88,8.02 -12.28,10.15 -19.91,17.23 -6.81,6.3 -9.92,10.85 -17.67,16.83l-36.72 32.26c-7.79,7.58 -12.42,10.36 -19.86,17.27 -22.27,20.71 -27.93,22.36 -54.37,49.1 -7.81,7.89 -12.37,10.17 -19.95,17.18 -12.34,11.42 -22.17,22.81 -34.4,34.57 -20.01,19.26 -51.64,45.21 -71.57,69.04 -11.93,14.28 -20.72,25.36 -33.8,39.01 -5.86,15.13 -16.14,28.33 -25.57,39.58 -20.3,24.19 -41.9,47.48 -65.45,67.23l-36.57 32.36c-90.67,86.14 -212.9,158.13 -328.69,207.25 -178.89,75.86 -452.4,129.46 -579.57,226.88 -91.72,70.26 -128.47,138.68 -147.18,256.09 -5.87,36.84 -8.53,82.78 -16.27,117.7 -2.12,11.35 -2.22,25 -0.89,36.75 8.29,73.29 13.43,150.81 42.05,222z"/>
+
+   <path class="dg-body" d="M4340.1 155.79l105.7 -46.62c89.47,-35.91 163.18,-42.28 264.26,-41.03 19.1,0.23 82.34,6.2 100.33,13.74 9.18,3.85 18.22,7.59 32.21,7.59 2.15,-3.5 3.51,3.19 0,-5.61 -14.46,-5.61 -33.39,-8.13 -42.04,-17.81 -4.62,6.85 -21.92,0.76 -29.77,-0.66 -10.44,-1.88 -20.82,-2.3 -31.6,-2.82 -74.62,-3.58 -121.11,-3.63 -195.44,11.67 -37.92,7.81 -74.43,19.54 -107.57,33.24l-92.59 45.79c-0.49,0.34 -1.34,0.97 -1.74,1.25 -0.4,0.27 -1.18,0.83 -1.74,1.27z"/>
+
+   <path class="dg-body" d="M5954.28 1317.5c29.55,48.35 127.76,177 7.49,93.75 -14.35,-9.92 -28.8,-19.68 -44.34,-27.01 -12.04,-5.67 -24.78,-9.91 -38.67,-11.67 -71.69,-12.75 -134.97,34.14 -182.46,82.22 -127.71,136.05 -236.88,309.9 -355.08,483.45 -351.45,516.07 -853.37,888.01 -1510.9,805.9 -78.75,-8.96 -155.08,-30.18 -227.29,-61.19 -29.73,-12.76 -107.88,-59.04 -181.6,-105.86 -28.79,-18.28 -57.65,-35.67 -81.88,-52.2 -64.39,-43.9 -58.16,-43.87 15.72,-44.89 37.49,-0.5 75.12,1.82 112.69,0.99 152.16,-5.2 304.43,-25.98 451.36,-66.13 61.31,-16.75 121.72,-36.91 180.78,-60.7 639.45,-251.48 1413,-1752.8 1854.19,-1036.65z"/>
+
+   <path class="dg-body" d="M5683.75 1765.54c114.66,-39.96 235.76,-13.71 346.41,29.74 17.4,6.83 34.59,14.11 51.41,21.61 33.98,15.1 86.72,50.22 116.59,72.08 42.52,31.11 -13.64,19.29 -139.91,56.21 -31.39,9.18 -58.41,29.8 -84.02,50.1 -106.41,92.04 -153.4,229.44 -241.99,335.75 -59.12,84.45 -130.12,160.18 -213.04,221.45 -97.71,80.4 -205.93,148.84 -324.9,193.18 -115.64,45.37 -235.93,81.51 -360.25,91.42 -185.3,16.81 -372.01,4.98 -556.08,-18.62 176.38,-42.22 360.56,-61.46 526.51,-139.42 142.87,-66.73 267.31,-170.71 362.17,-296.27 97.71,-115.63 169.09,-249.9 251.62,-376.16 67.02,-99.52 147.32,-201.49 265.48,-241.08z"/>
+
+   <path class="dg-body" d="M5464.03 2800.84c11.16,-9.87 21.87,-21.08 33.3,-31.14 3.99,-3.51 8.08,-6.88 12.3,-10.01 70.95,-52.54 28.63,46.86 15.65,80.05 -17.07,43.65 -39.47,85.68 -58.42,128.17 -64.8,135.58 -140.13,271.35 -257.29,369.06 -67.27,61.71 -159.68,79.02 -249.27,76.02 -237.86,-7.86 -581.06,-198.65 -793.73,-325.01 -129.38,-84.55 -269.93,-150.67 -412.39,-209.88 61.36,57.79 128.58,109.04 189.95,166.95 73.5,65.3 135.99,141.55 199.87,216.06 195.8,245.41 371.82,490.96 729.93,420.71 28.84,-5.02 57.48,-13.34 86.42,-18.92 10.81,-2.08 21.67,-3.78 32.58,-4.78 84.89,-7.78 -4.47,49.26 -32.11,67.5 -6.27,4.14 -12.55,8.27 -18.65,12.5 -107.74,69.86 -220.54,140.84 -350.13,159.37 -87.69,16.31 -173.65,-30.16 -237.02,-86.58 -48.55,-37.18 -95.81,-114.41 -131.71,-166.07 -78.28,-112.63 -176.34,-260.43 -215.9,-338.45 -50.22,-104.3 -119.17,-197.85 -185.6,-292.01 -29.37,-38.99 -56.5,-80.09 -91.63,-114.12 33.41,87.08 81.82,167.67 115.64,254.65 8.53,20.98 16.75,40.95 24.83,59.95 97.72,229.86 187.51,628.08 480.99,697.59 13.96,3.31 28.06,6.24 42.11,9.21 26.8,5.64 126.42,16.59 70.16,41.28 -23.23,10.18 -49.99,12.43 -74.58,17.88 -120.69,20.15 -251.01,37.56 -366.74,-12.65 -141.09,-82.93 -189.55,-472.98 -247.56,-750.37 -24,-129.61 -52.66,-262.76 -123.33,-375.75 -26.07,-23.16 -61.92,-30.74 -93.89,-45.12 -45.05,-20.27 -55.76,-37.59 3.89,-35.26 25.79,1.01 51.64,5.12 77.36,6.96 254.91,30.03 500.89,107.12 741.97,192.94 24.74,8.81 49.46,17.72 74.11,26.68 224,96.13 533.55,119.41 759.29,11.15 97.71,-45.26 174.56,-123.33 249.59,-198.56z"/>
+
+   <path class="dg-body" d="M4718.95 708.86c-50.31,63.87 -96.23,131.21 -128.73,206.06 -81.61,165.55 -144.89,339.3 -221.74,507.08 -22.88,54.47 -51.03,107.03 -68.44,163.62 70.28,-147.83 159.17,-285.83 238.65,-428.8 317.41,-508.07 682.83,-657.62 893.86,-589.9 131.8,41.03 239.14,131.81 322.22,240.29 25.6,33.42 48.92,68.54 69.92,104.38 24.28,44.28 44.15,80.23 59.3,108.49 84.16,156.95 -15.72,52.01 -74.62,2.94 -25.27,-21.04 -54.36,-36.39 -85.42,-47.33 -46.98,-16.52 -98.55,-22.98 -148.55,-23.91 -89.51,-3.14 -177,29.87 -249.69,80.5 -52.8,34.78 -100.29,75.73 -145.42,119.28 -169.97,163.94 -232.75,268.58 -377.33,444.05 -156.59,190.04 -327.69,368.46 -524.2,517.54 -149.65,114.31 -317.93,207.25 -499.98,257.88 -173.96,49.11 -362.28,52.66 -535.22,-2.12 -20.72,-6.68 -40.41,-15.74 -59.01,-26.62 -86.31,-50.48 -90.4,-54.07 -3.92,-59.6 156.8,-10.01 314.62,-39.07 452.77,-116.6 157.23,-86.06 287.65,-216.67 381,-369.16 57.93,-95.78 114.41,-195.12 142.97,-304.06 -24.29,6.48 -29.26,33.31 -40.3,52.35 -77.66,164.94 -184.68,317.33 -321.07,438.92 -188.64,164.22 -440.25,267.2 -692.66,246.55 -90.22,-7.5 -203.16,-58.01 -251.7,-141.58 -24.86,-42.84 -50.95,-104.27 14.27,-43.06 79.25,74.38 82.08,101.98 259.51,124.7 149.45,-1.73 297.78,-64.4 404.9,-168.28 472.71,-677.93 268.66,-1261.22 1262.7,-1524.47 511.49,-135.45 97.63,13.03 -74.06,230.86z"/>
+
+   <path class="dg-body" d="M288.41 3394.39c15.64,144.16 24.36,127.39 48.62,25.34 2.6,-10.96 8.66,-20.56 15.24,-29.46 31.96,-48.07 85.78,-51.01 131.86,-44.46 126.87,22.18 260.66,80.25 399.05,133.14 411.52,157.29 838.45,133.97 1147,-283.3 51.55,-68.15 90.36,-149.62 117.02,-237.59 4.1,-13.52 14.24,-54.9 24.79,-100.3 6.98,-30.05 14.49,-61.81 19.83,-88.56 10.04,-50.3 8.47,-54.18 -28.75,-13.34 -19.13,20.99 -38.8,41.8 -58.8,61.83 -1.8,1.76 -3.61,3.51 -5.4,5.25 -80.56,77.92 -167.72,145.65 -260.36,197.98 -39.52,22.33 -80.07,41.85 -121.52,58.16 -445.97,180.75 -1512.65,-413.66 -1428.58,315.3z"/>
+
+   <path class="dg-body" d="M627.55 3549.96c-95.11,43.94 -151.61,160.5 -192.81,271.75l-9.67 41.91 -9.7 42.01c-8.44,65.58 0.52,37.18 33.07,5.97 13.91,-13.35 31.74,-21.21 48.71,-28.55 25.45,-11.02 52.3,-17 79.28,-17.36 96.31,4.02 181.45,71.5 274.72,95 68.18,24.85 138.75,37.26 209.2,33.28 86.63,0.89 173.51,-12.12 255.41,-47.42 80.61,-32.76 159.58,-74.34 229.13,-135.96 104.55,-90.47 197.22,-201.15 283.33,-318.38 -111.06,68.29 -216.09,156.48 -337.42,194.77 -104.29,33.21 -215.32,31.01 -320.34,-2.11 -102.14,-24.81 -198.69,-76.76 -297.56,-117.14 -78.96,-30.76 -165.97,-55.86 -245.34,-17.79z"/>
+
+   <path class="dg-body" d="M1270.74 4247.38c55.75,33.61 113.51,65.21 173.14,85.7 40.54,13.93 81.98,22.72 124.26,23.51 62.45,4.94 118.51,-34.12 164.16,-85.41 121.24,-136.11 217.15,-454.38 272.99,-657.11 30.6,-128.56 75.16,-250.74 123.78,-369.28 -6.72,72.98 -19.4,144.75 -26.07,217.82 -9.78,84.77 -8.96,170.9 -9.63,256.63 5.42,274.34 21.28,537.89 -197.4,687.06 -62.14,44.63 -160.71,90.21 -10.99,75.75 87.25,-11.79 177.64,-25.58 253.74,-84.26 53.16,-37.13 77.76,-115.96 86.14,-189.11 9.07,-51.95 -0.16,-130.38 -4.08,-185.2 -8.56,-119.54 -22.24,-273.83 -35.86,-348.58 -19.6,-98.45 -24.65,-199.89 -31.3,-300.37 -1.77,-42.63 -5.65,-85.46 -2.21,-127.89 20.82,77.52 30.95,158.86 51.52,236.54 4.77,18.93 9.25,37.02 13.37,54.37 49.99,209.84 178.28,529.68 55.04,738.25 -58.13,98.37 -83.85,137.87 30.17,52.52 65.88,-49.28 131.83,-106.78 166.86,-195.58 37.44,-133.9 -108.92,-425.46 -200.66,-645.76 -44.49,-101.23 -88.1,-207.41 -100.82,-323.02 2.99,-25.87 14.86,-47.88 24.75,-70.93 39.11,-91.07 -9.6,-38.7 -38.11,-1.53 -4.06,5.3 -8.14,10.57 -12.33,15.65 -120.42,160.53 -215.42,348.13 -304.03,538.96 -9.09,19.59 -18.12,39.23 -27.11,58.87 -75.1,188.44 -227.14,374.44 -393.15,425.02 -53.01,17.12 -107.98,15.49 -162.51,9.49 -195.37,-21.48 -141.11,6.17 16.31,107.9z"/>
+
+   <path class="dg-body" d="M443.97 2237.22c-16.22,10.75 -32.53,21.58 -48.3,33.5 -62.32,47.12 -23.46,35.26 19.61,26.04 73.47,-15.71 126.08,-27.39 208.26,-6.81 69.57,17.43 139.14,39.17 202.7,81.07 115.68,67.58 225.37,150.8 339.55,222.5 35.98,24.42 73.88,44.64 107.93,73.49 -101.93,-61.75 -209.31,-106.62 -313.94,-160.02 -390.15,-170.58 -647.57,-71.25 -728.39,90.77 -66.76,131.25 -74.05,297.3 -53.8,449.7 4.02,23.72 7.52,47.67 11.37,71.55 32.41,201.03 32.81,66.7 53.16,-29.68 12.59,-59.63 46.4,-110.81 83.86,-151.62 45.55,-51.34 105.95,-77.02 166.36,-82.6 42.99,-5.4 85.92,-3.7 128.76,1.06 161.3,17.91 240.3,54.47 393.37,94.15 165.78,42.98 334.05,70.1 502.72,63.31 128.8,-4.64 257.95,-34.03 375.68,-99.72 112.82,-62.28 213.12,-163.41 279.66,-295.7 3.6,-7.23 6.87,-14.68 9.82,-22.3 59.15,-152.33 3.79,-85.04 -53.13,-37.11 -76.27,64.23 -159.29,116.08 -250.38,135.99 -120.33,27.99 -246.23,10.98 -362.31,-41.27 -72.55,-33.2 -145.91,-69.62 -208.86,-127.92 15.59,-8.95 30.01,6.56 44.19,13.4 113.34,69.33 236.56,114 361.62,121.62 171.21,7.82 348.46,-60.57 471.7,-213.37 40.33,-50.14 78.09,-140.49 71.49,-221.9 -1.06,-13.09 -2.99,-26.06 -6.8,-38.41 -12.64,-41 -17.31,-40.01 -19.83,1.84 -0.75,12.41 -0.63,24.06 -0.94,35.53 -1.4,50.3 -7.63,97.74 -81.89,194.36 -9.67,9.9 -19.73,19.17 -30.12,27.8 -74.68,61.97 -166.81,90.75 -256.26,80.51 -569.48,-209.05 -708.21,-752.48 -1416.86,-289.75z"/>
+
+  </g>
+
+ </g>
+
+</svg>
+
+                        </div>
+
+                        <div style="text-align: center;">
+
+                            <h4 style="font-family:var(--font-heading); font-size:1.15rem; letter-spacing:0.1em; color:var(--text-primary);">DANZAS GUANTA</h4>
+
+                            <p style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.46em; color:var(--accent-gold); margin-top:0.25rem; font-weight:600; margin-bottom:0;">Patrimonio Cultural</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Archivo de Imagen Oficial -->
+
+                    <div class="logo-showcase-card">
+
+                        <span class="section-label" style="font-size:0.6rem; margin-bottom:0;">Marca Gráfica Oficial (SVG Vectorial)</span>
+
+                        <div style="background-color: var(--bg-primary); padding: 2rem 3rem; border-radius: 6px; border: 1px solid var(--border-color); display:flex; align-items:center; justify-content:center; width:100%; max-width: 320px; aspect-ratio: 6489 / 7645;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6489.85 7645.26" class="danzas-guanta-logo-svg">
+
+  <g id="Capa_x0020_1">
+
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+
+  <text x="-54.32" y="6758.08"  class="dg-text fnt0">DANZAS GUANTA</text>
+
+  <path class="dg-body dg-stroke-body" d="M71.37 7513.58c12.51,2.28 23.9,2.47 34.26,0.65 10.36,-1.82 19.29,-5.8 26.71,-11.86 7.43,-6.06 13.24,-14.2 17.41,-24.49 4.1,-10.3 6.19,-22.94 6.19,-37.8 0,-10.29 -1.11,-19.74 -3.26,-28.15 -2.16,-8.46 -5.35,-15.7 -9.65,-21.64 -4.24,-5.85 -9.64,-10.49 -16.1,-13.69 -6.51,-3.25 -14.07,-4.88 -22.73,-4.88 -5.48,0 -10.23,0.19 -14.34,0.64 -4.04,0.47 -7.5,0.92 -10.29,1.44 -3.33,0.65 -6.06,1.37 -8.21,2.09l0 137.67zm-40.27 -152.54c2.54,0.26 5.21,0.52 8.01,0.71 2.42,0.27 5.15,0.47 8.15,0.53 2.93,0.06 6.06,0.06 9.26,0.06 4.94,0 11.66,-0.59 20.13,-1.83 8.47,-1.18 19.22,-1.76 32.31,-1.76 12.25,0 23.52,1.76 33.88,5.35 10.44,3.51 19.43,8.73 27.05,15.63 7.62,6.85 13.56,15.26 17.86,25.09 4.23,9.91 6.38,21.12 6.38,33.69 0,16.94 -3.4,31.61 -10.11,43.91 -6.77,12.38 -15.83,22.35 -27.1,29.98 -11.34,7.62 -24.37,12.84 -39.16,15.57 -14.8,2.74 -30.25,2.87 -46.4,0.46l0 31.67c0,10.82 0.19,20.27 0.45,28.4 0.34,8.08 0.72,14.98 1.18,20.85 0.46,5.87 1.04,10.75 1.7,14.73 0.71,3.92 1.42,7.24 2.21,9.91l0 0.79 -45.8 0 0 -0.79c0.79,-2.67 1.5,-5.99 2.22,-9.91 0.64,-3.97 1.3,-8.86 1.76,-14.73 0.51,-5.87 0.9,-12.77 1.17,-20.85 0.26,-8.13 0.38,-17.58 0.38,-28.4l0 -124.26c0,-10.81 -0.13,-20.26 -0.38,-28.35 -0.26,-8.07 -0.66,-15.05 -1.17,-20.97 -0.47,-5.93 -1.12,-10.89 -1.76,-14.79 -0.72,-3.98 -1.43,-7.24 -2.22,-9.98l0 -0.71zm501.65 273.73l0 -0.79c0.27,-0.58 0.47,-1.56 0.59,-2.87 0.13,-1.24 0.19,-2.42 0.19,-3.4 0,-3.96 -0.51,-8.34 -1.63,-13.09 -1.1,-4.75 -3.12,-10.75 -6.19,-17.86l-23.13 -51.93c-7.1,-0.26 -16.62,-0.38 -28.41,-0.38 -11.85,0 -24.62,0 -38.37,0 -10.03,0 -19.75,0 -29.13,0 -9.31,0 -17.78,0.13 -25.27,0.38l-21.97 50.44c-1.89,4.68 -3.91,9.83 -6.13,15.44 -2.15,5.61 -3.19,11.28 -3.19,17 0,1.63 0.06,3 0.32,4.11 0.26,1.04 0.53,1.76 0.79,2.15l0 0.79 -38.97 0 0 -0.79c2.36,-2.41 5.21,-6.71 8.6,-12.84 3.46,-6.19 7.23,-13.94 11.28,-23.2l109.39 -242.65 15.26 0 103.67 233.26c2.41,5.48 4.95,10.83 7.56,15.96 2.6,5.15 5.01,9.72 7.37,13.83 2.27,4.03 4.3,7.49 6.05,10.28 1.83,2.81 2.99,4.64 3.65,5.35l0 0.79 -52.33 0zm-123.66 -106.73c7.37,0 14.92,0 22.67,-0.06 7.82,-0.06 15.38,-0.13 22.88,-0.19 7.42,-0.06 14.6,-0.14 21.44,-0.2 6.91,-0.06 13.09,-0.19 18.7,-0.26l-53.63 -121.26 -52.71 121.97 20.66 0zm383.45 -150.18c-14.98,0 -28.54,0.65 -40.66,1.94 -12.05,1.38 -22.48,2.8 -31.27,4.3 -10.17,1.95 -19.28,4.04 -27.31,6.32l5.54 -30.94c1.5,0.13 3.84,0.26 6.85,0.39 3.06,0.13 6.51,0.26 10.22,0.39 3.79,0.13 7.7,0.26 11.87,0.32 4.1,0 8.01,0.06 11.73,0.13 3.71,0.06 6.97,0.13 9.83,0.2 2.88,0.06 4.96,0.13 6.19,0.13l109.02 0c1.23,0 3.31,-0.06 6.18,-0.13 2.87,-0.07 6.13,-0.14 9.84,-0.2 3.71,-0.06 7.62,-0.13 11.73,-0.13 4.17,-0.06 8.07,-0.19 11.85,-0.32 3.79,-0.14 7.18,-0.26 10.23,-0.39 3.07,-0.14 5.35,-0.26 6.84,-0.39l5.54 30.94c-8.14,-2.27 -17.33,-4.36 -27.5,-6.32 -8.79,-1.5 -19.22,-2.92 -31.27,-4.3 -12.13,-1.3 -25.67,-1.94 -40.65,-1.94l0 182.25c0,10.82 0.13,20.27 0.45,28.4 0.32,8.08 0.72,14.98 1.17,20.85 0.39,5.87 0.99,10.75 1.7,14.73 0.71,3.92 1.43,7.24 2.22,9.91l0 0.79 -45.68 0 0 -0.79c0.78,-2.67 1.5,-5.99 2.15,-9.91 0.58,-3.97 1.17,-8.86 1.68,-14.73 0.53,-5.87 0.91,-12.77 1.18,-20.85 0.2,-8.13 0.33,-17.58 0.33,-28.4l0 -182.25zm313.87 182.25c0,10.82 0.19,20.27 0.45,28.4 0.34,8.08 0.72,14.98 1.18,20.85 0.46,5.87 1.04,10.75 1.7,14.73 0.72,3.92 1.42,7.24 2.21,9.91l0 0.79 -45.8 0 0 -0.79c0.79,-2.67 1.5,-5.99 2.22,-9.91 0.64,-3.97 1.23,-8.86 1.69,-14.73 0.46,-5.87 0.85,-12.77 1.18,-20.79 0.26,-8.01 0.46,-17.52 0.46,-28.47l0 -124.26c0,-10.81 -0.2,-20.26 -0.46,-28.35 -0.33,-8.07 -0.72,-15.05 -1.18,-20.91 -0.46,-5.81 -1.05,-10.75 -1.69,-14.79 -0.72,-3.98 -1.43,-7.3 -2.22,-10.04l0 -0.71 8.01 0.71c2.42,0.27 5.15,0.47 8.15,0.53 2.93,0.06 6.06,0.06 9.26,0.06 4.94,0 11.66,-0.59 20.13,-1.83 8.47,-1.18 19.22,-1.76 32.31,-1.76 12.26,0 23.52,1.63 33.89,4.95 10.43,3.32 19.42,8.15 27.04,14.47 7.62,6.39 13.56,14.21 17.86,23.39 4.24,9.26 6.38,19.75 6.38,31.42 0,9.18 -1.17,17.65 -3.52,25.47 -2.35,7.88 -5.67,14.93 -9.97,21.31 -4.24,6.38 -9.39,11.99 -15.31,16.88 -5.99,4.94 -12.71,9.05 -20.07,12.31l66.98 94.15c3.32,4.69 6.38,8.73 9.25,12.19 2.87,3.45 5.61,6.38 8.21,8.86 2.61,2.47 5.15,4.56 7.56,6.13 2.42,1.63 4.89,2.87 7.42,3.72l0 0.79 -55.12 0c-0.39,-2.41 -1.63,-5.61 -3.78,-9.65 -2.08,-4.04 -4.49,-8.02 -7.29,-11.91l-67.57 -95.27c-2.94,0.26 -5.86,0.46 -8.8,0.65 -2.93,0.2 -5.93,0.33 -8.99,0.33 -3.58,0 -7.16,-0.13 -10.75,-0.39 -3.64,-0.26 -7.29,-0.71 -11,-1.37l0 42.95zm0 -57.8c3.45,0.72 6.97,1.31 10.49,1.63 3.58,0.32 7.03,0.45 10.29,0.45 9.58,0 18.31,-1.42 26.19,-4.29 7.89,-2.88 14.6,-7.24 20.13,-13.1 5.54,-5.8 9.84,-13.1 12.9,-21.83 3.07,-8.73 4.57,-18.96 4.57,-30.62 0,-9.59 -1.1,-18.25 -3.26,-26.01 -2.16,-7.75 -5.35,-14.32 -9.65,-19.73 -4.24,-5.41 -9.64,-9.58 -16.1,-12.58 -6.51,-2.99 -14.07,-4.49 -22.73,-4.49 -8.8,0 -15.77,0.45 -20.98,1.3 -5.22,0.91 -9.19,1.9 -11.86,2.88l0 126.4zm304.47 131.69c0.79,-2.67 1.51,-5.99 2.15,-9.91 0.59,-3.97 1.18,-8.86 1.7,-14.73 0.52,-5.87 0.91,-12.77 1.1,-20.85 0.26,-8.13 0.39,-17.58 0.39,-28.4l0 -124.26c0,-10.81 -0.13,-20.26 -0.39,-28.35 -0.19,-8.07 -0.58,-15.05 -1.1,-20.97 -0.52,-5.93 -1.1,-10.89 -1.7,-14.79 -0.65,-3.98 -1.37,-7.24 -2.15,-9.98l0 -0.71 45.68 0 0 0.71c-0.77,2.74 -1.49,6 -2.21,9.98 -0.71,3.9 -1.31,8.86 -1.75,14.79 -0.4,5.93 -0.79,12.9 -1.1,20.97 -0.34,8.09 -0.47,17.54 -0.47,28.35l0 124.26c0,10.82 0.13,20.27 0.47,28.4 0.32,8.08 0.7,14.98 1.1,20.85 0.45,5.87 1.04,10.75 1.75,14.73 0.72,3.92 1.44,7.24 2.21,9.91l0 0.79 -45.68 0 0 -0.79zm200.5 0c1.36,-2.03 2.99,-5.01 4.75,-9.06 1.83,-3.97 3.2,-9.06 4.24,-15.19 1.38,-8.92 2.94,-18.88 4.64,-30.03 1.75,-11.14 3.51,-22.81 5.34,-35.06 1.89,-12.19 3.71,-24.69 5.53,-37.46 1.89,-12.85 3.66,-25.42 5.34,-37.86 1.77,-12.38 3.39,-24.37 5.02,-35.84 1.56,-11.53 3,-22.08 4.3,-31.6 1.24,-9.58 2.28,-17.86 3.13,-24.95 0.85,-7.04 1.42,-12.38 1.83,-15.9l24.23 0 120.09 224.48 119.11 -224.48 18.11 0 31.34 226.75c0.85,7.16 1.84,13.22 2.81,18.3 1.04,5.15 2.08,9.51 3.05,13.09 1.04,3.66 2.03,6.66 3,9 0.91,2.35 1.89,4.3 2.74,5.8l0 0.79 -48.09 0 0 -0.79c0.66,-1.37 1.25,-3.65 1.83,-6.84 0.53,-3.2 0.85,-7.04 0.85,-11.48 0,-1.63 -0.06,-3.31 -0.19,-5.09 -0.13,-1.68 -0.32,-3.58 -0.59,-5.6l-24.24 -182.9 -112.59 211.9 -13.22 -1.5 -113.38 -212.29c-4.44,30.17 -8.34,58.06 -11.59,83.6 -1.44,10.96 -2.81,21.89 -4.24,32.78 -1.38,10.88 -2.61,20.98 -3.72,30.43 -1.1,9.45 -1.95,17.73 -2.59,24.9 -0.59,7.22 -0.92,12.5 -0.92,15.96 0,4.3 0.14,8.14 0.39,11.47 0.19,3.25 0.46,6.06 0.72,8.4 0.38,2.67 0.79,5.02 1.17,7.05l-38.18 0 0 -0.79zm648.46 -277.58c21.24,0 40.85,3.52 58.9,10.43 17.99,6.98 33.56,16.68 46.65,29.2 13.11,12.58 23.33,27.63 30.76,45.15 7.37,17.6 11.08,37.01 11.08,58.26 0,12.06 -1.44,23.98 -4.24,35.71 -2.8,11.67 -6.91,22.73 -12.32,33.16 -5.41,10.5 -12.05,20.14 -19.94,28.94 -7.88,8.86 -16.88,16.48 -26.98,22.93 -10.16,6.38 -21.3,11.47 -33.56,15.05 -12.18,3.65 -25.34,5.48 -39.48,5.48 -21.24,0 -40.86,-3.4 -58.91,-10.23 -17.98,-6.77 -33.54,-16.43 -46.65,-28.93 -13.09,-12.44 -23.39,-27.43 -30.75,-44.96 -7.37,-17.46 -11.07,-36.95 -11.07,-58.32 0,-12.05 1.43,-23.97 4.24,-35.71 2.79,-11.67 6.9,-22.8 12.31,-33.36 5.4,-10.55 12,-20.26 19.81,-29.12 7.89,-8.86 16.82,-16.48 26.9,-23 10.17,-6.51 21.38,-11.53 33.62,-15.19 12.32,-3.64 25.48,-5.47 39.62,-5.47zm10.88 267.08c14.13,0 27.03,-2.53 38.76,-7.61 11.66,-5.09 21.77,-12.45 30.24,-22.16 8.47,-9.64 15.05,-21.5 19.75,-35.38 4.75,-13.94 7.09,-29.77 7.09,-47.44 0,-19.61 -2.28,-37.8 -6.77,-54.53 -4.56,-16.75 -11.28,-31.21 -20.13,-43.52 -8.93,-12.26 -20.08,-21.9 -33.37,-28.81 -13.28,-6.97 -28.79,-10.42 -46.45,-10.42 -14.14,0 -27.04,2.54 -38.77,7.56 -11.66,5 -21.77,12.31 -30.24,21.82 -8.47,9.58 -15.05,21.31 -19.74,35.12 -4.76,13.88 -7.1,29.64 -7.1,47.37 0,19.47 2.22,37.66 6.71,54.48 4.44,16.86 11.15,31.46 20,43.85 8.93,12.32 20.07,22.02 33.43,29.11 13.36,7.04 28.92,10.55 46.59,10.55zm302.2 -262.45l196.64 209.22 0 -134.42c0,-10.81 -0.14,-20.26 -0.39,-28.35 -0.26,-8.07 -0.66,-15.05 -1.17,-20.97 -0.53,-5.93 -1.1,-10.89 -1.83,-14.79 -0.65,-3.98 -1.43,-7.24 -2.15,-9.98l0 -0.71 33.94 0 0 0.71c-0.77,2.74 -1.42,6 -2.08,9.98 -0.65,3.9 -1.23,8.86 -1.69,14.79 -0.52,5.93 -0.91,12.9 -1.17,20.97 -0.27,8.09 -0.4,17.54 -0.4,28.35l0 202.78 -6.64 0 -196.65 -209.03 0 130.52c0,10.82 0.13,20.27 0.39,28.4 0.26,8.08 0.65,14.98 1.11,20.85 0.51,5.87 1.1,10.75 1.75,14.73 0.65,3.92 1.31,7.24 2.08,9.91l0 0.79 -33.94 0 0 -0.79c0.72,-2.67 1.43,-5.99 2.15,-9.91 0.72,-3.97 1.31,-8.86 1.83,-14.73 0.53,-5.87 0.91,-12.77 1.18,-20.85 0.26,-8.13 0.33,-17.58 0.33,-28.4l0 -124.26c0,-10.81 -0.07,-20.26 -0.33,-28.35 -0.26,-8.07 -0.65,-15.05 -1.18,-20.97 -0.51,-5.93 -1.1,-10.89 -1.83,-14.79 -0.71,-3.98 -1.42,-7.24 -2.15,-9.98l0 -0.71 12.19 0zm391.93 272.95c0.79,-2.67 1.51,-5.99 2.15,-9.91 0.59,-3.97 1.19,-8.86 1.7,-14.73 0.52,-5.87 0.91,-12.77 1.11,-20.85 0.26,-8.13 0.38,-17.58 0.38,-28.4l0 -124.26c0,-10.81 -0.13,-20.26 -0.38,-28.35 -0.2,-8.07 -0.59,-15.05 -1.11,-20.97 -0.51,-5.93 -1.1,-10.89 -1.7,-14.79 -0.64,-3.98 -1.36,-7.24 -2.15,-9.98l0 -0.71 45.68 0 0 0.71c-0.78,2.74 -1.5,6 -2.22,9.98 -0.7,3.9 -1.3,8.86 -1.75,14.79 -0.39,5.93 -0.79,12.9 -1.1,20.97 -0.33,8.09 -0.47,17.54 -0.47,28.35l0 124.26c0,10.82 0.14,20.27 0.47,28.4 0.32,8.08 0.71,14.98 1.1,20.85 0.46,5.87 1.05,10.75 1.75,14.73 0.72,3.92 1.44,7.24 2.22,9.91l0 0.79 -45.68 0 0 -0.79zm338.9 -277.58c21.24,0 40.85,3.52 58.9,10.43 17.99,6.98 33.56,16.68 46.65,29.2 13.1,12.58 23.33,27.63 30.75,45.15 7.37,17.6 11.08,37.01 11.08,58.26 0,12.06 -1.43,23.98 -4.23,35.71 -2.81,11.67 -6.92,22.73 -12.32,33.16 -5.4,10.5 -12.05,20.14 -19.94,28.94 -7.88,8.86 -16.88,16.48 -26.97,22.93 -10.17,6.38 -21.31,11.47 -33.56,15.05 -12.18,3.65 -25.34,5.48 -39.49,5.48 -21.24,0 -40.86,-3.4 -58.9,-10.23 -17.99,-6.77 -33.55,-16.43 -46.65,-28.93 -13.09,-12.44 -23.39,-27.43 -30.76,-44.96 -7.36,-17.46 -11.07,-36.95 -11.07,-58.32 0,-12.05 1.42,-23.97 4.23,-35.71 2.8,-11.67 6.9,-22.8 12.32,-33.36 5.4,-10.55 12,-20.26 19.81,-29.12 7.89,-8.86 16.81,-16.48 26.9,-23 10.17,-6.51 21.38,-11.53 33.62,-15.19 12.32,-3.64 25.47,-5.47 39.62,-5.47zm10.87 267.08c14.14,0 27.03,-2.53 38.76,-7.61 11.67,-5.09 21.77,-12.45 30.24,-22.16 8.47,-9.64 15.05,-21.5 19.75,-35.38 4.76,-13.94 7.09,-29.77 7.09,-47.44 0,-19.61 -2.27,-37.8 -6.77,-54.53 -4.56,-16.75 -11.28,-31.21 -20.13,-43.52 -8.92,-12.26 -20.07,-21.9 -33.37,-28.81 -13.28,-6.97 -28.79,-10.42 -46.44,-10.42 -14.15,0 -27.05,2.54 -38.77,7.56 -11.67,5 -21.77,12.31 -30.24,21.82 -8.47,9.58 -15.05,21.31 -19.74,35.12 -4.77,13.88 -7.1,29.64 -7.1,47.37 0,19.47 2.21,37.66 6.7,54.48 4.45,16.86 11.15,31.46 20,43.85 8.94,12.32 20.08,22.02 33.43,29.11 13.37,7.04 28.93,10.55 46.59,10.55zm630.14 -220.49l-1.7 0.79c-9.9,-9.19 -21.82,-16.49 -35.77,-21.97 -13.94,-5.47 -29.25,-8.2 -45.93,-8.2 -16.03,0 -30.76,2.54 -44.12,7.56 -13.35,5 -24.81,12.31 -34.39,21.82 -9.64,9.58 -17.14,21.31 -22.48,35.12 -5.35,13.88 -8.02,29.64 -8.02,47.37 0,19.47 2.55,37.66 7.62,54.48 5.15,16.86 12.71,31.46 22.75,43.85 10.02,12.32 22.6,22.02 37.71,29.11 15.06,7.04 32.65,10.55 52.78,10.55 7.24,0 14.47,-0.77 21.77,-2.27 7.23,-1.5 14.2,-3.77 20.92,-6.77 6.65,-2.99 12.96,-6.65 18.89,-10.88 5.87,-4.23 11.28,-9.12 16.1,-14.59l2.08 1.3 -15.25 38.97c-9.51,3.71 -20.07,6.52 -31.61,8.47 -11.53,2.02 -23.13,2.99 -34.79,2.99 -23.58,0 -45.08,-3.4 -64.64,-10.23 -19.54,-6.77 -36.35,-16.43 -50.42,-28.93 -14.07,-12.44 -24.96,-27.43 -32.84,-44.96 -7.82,-17.46 -11.73,-36.95 -11.73,-58.32 0,-12.05 1.56,-23.97 4.69,-35.71 3.12,-11.67 7.69,-22.8 13.61,-33.36 6,-10.55 13.43,-20.26 22.16,-29.12 8.79,-8.86 18.83,-16.48 30.1,-23 11.28,-6.51 23.65,-11.53 37.2,-15.19 13.56,-3.64 28.22,-5.47 43.99,-5.47 24.56,0 47.37,3.78 68.35,11.28l12.96 35.31zm351.14 32.84c0,-10.81 -0.13,-20.26 -0.39,-28.35 -0.26,-8.07 -0.65,-15.05 -1.18,-20.97 -0.45,-5.93 -1.04,-10.89 -1.69,-14.79 -0.65,-3.98 -1.31,-7.24 -2.08,-9.98l0 -0.71 33.94 0 0 0.71c-0.72,2.74 -1.51,6 -2.15,9.98 -0.72,3.9 -1.31,8.86 -1.76,14.79 -0.46,5.93 -0.79,12.9 -1.11,20.97 -0.32,8.09 -0.52,17.54 -0.52,28.35l0 103.09c0,18.24 -2.6,33.74 -7.81,46.59 -5.21,12.83 -12.45,23.39 -21.77,31.59 -9.24,8.22 -20.39,14.21 -33.35,17.92 -13.03,3.78 -27.18,5.67 -42.61,5.67 -15.38,0 -29.72,-1.83 -43.01,-5.34 -13.36,-3.59 -24.89,-9.32 -34.8,-17.27 -9.83,-7.94 -17.58,-18.3 -23.2,-30.95 -5.6,-12.64 -8.39,-28.07 -8.39,-46.26l0 -105.04c0,-10.81 -0.07,-20.26 -0.34,-28.35 -0.26,-8.07 -0.64,-15.05 -1.17,-20.97 -0.51,-5.93 -1.1,-10.89 -1.83,-14.79 -0.71,-3.98 -1.43,-7.24 -2.15,-9.98l0 -0.71 45.82 0 0 0.71c-0.79,2.74 -1.51,6 -2.23,9.98 -0.71,3.9 -1.31,8.86 -1.82,14.79 -0.53,5.93 -0.91,12.9 -1.1,20.97 -0.27,8.09 -0.4,17.54 -0.4,28.35l0 107.12c0,15.13 2.22,27.63 6.78,37.48 4.49,9.9 10.43,17.71 17.86,23.52 7.36,5.79 15.76,9.83 25.14,12.12 9.45,2.29 19.03,3.46 28.87,3.46 9.78,0 19.42,-1.17 28.8,-3.46 9.45,-2.28 17.78,-6.33 25.08,-12.12 7.36,-5.81 13.29,-13.62 17.78,-23.52 4.49,-9.85 6.78,-22.35 6.78,-37.48l0 -107.12zm234.05 182.12c15.05,0 28.87,-0.65 41.44,-1.89 12.58,-1.31 23.59,-2.73 33.04,-4.36 10.94,-1.82 20.92,-3.91 29.96,-6.33l-5.53 30.89c-1.56,-0.13 -3.84,-0.19 -6.9,-0.32 -3.07,-0.13 -6.45,-0.26 -10.23,-0.39 -3.72,-0.13 -7.69,-0.26 -11.8,-0.33 -4.16,-0.06 -8.08,-0.13 -11.72,-0.19 -3.72,-0.06 -6.98,-0.13 -9.85,-0.19 -2.86,-0.06 -4.94,-0.06 -6.18,-0.06l-82.49 0 0 -0.79c0.79,-2.67 1.49,-5.99 2.21,-9.91 0.65,-3.97 1.31,-8.86 1.76,-14.73 0.52,-5.87 0.9,-12.77 1.18,-20.85 0.26,-8.13 0.38,-17.58 0.38,-28.4l0 -124.26c0,-10.81 -0.13,-20.26 -0.38,-28.35 -0.27,-8.07 -0.66,-15.05 -1.18,-20.97 -0.46,-5.93 -1.11,-10.89 -1.76,-14.79 -0.72,-3.98 -1.42,-7.24 -2.21,-9.98l0 -0.71 45.8 0 0 0.71c-0.79,2.74 -1.5,6 -2.22,9.98 -0.66,3.9 -1.23,8.86 -1.7,14.79 -0.45,5.93 -0.84,12.9 -1.17,20.97 -0.26,8.09 -0.46,17.54 -0.46,28.35l0 182.12zm323.58 -240.1c-14.98,0 -28.54,0.65 -40.66,1.94 -12.05,1.38 -22.48,2.8 -31.27,4.3 -10.17,1.95 -19.28,4.04 -27.31,6.32l5.54 -30.94c1.5,0.13 3.84,0.26 6.85,0.39 3.06,0.13 6.51,0.26 10.22,0.39 3.79,0.13 7.7,0.26 11.87,0.32 4.1,0 8.01,0.06 11.73,0.13 3.71,0.06 6.97,0.13 9.83,0.2 2.88,0.06 4.96,0.13 6.19,0.13l109.02 0c1.23,0 3.32,-0.06 6.18,-0.13 2.87,-0.07 6.13,-0.14 9.84,-0.2 3.71,-0.06 7.62,-0.13 11.73,-0.13 4.17,-0.06 8.07,-0.19 11.86,-0.32 3.78,-0.14 7.17,-0.26 10.23,-0.39 3.07,-0.14 5.35,-0.26 6.84,-0.39l5.54 30.94c-8.14,-2.27 -17.33,-4.36 -27.5,-6.32 -8.79,-1.5 -19.22,-2.92 -31.27,-4.3 -12.12,-1.3 -25.67,-1.94 -40.65,-1.94l0 182.25c0,10.82 0.13,20.27 0.45,28.4 0.32,8.08 0.72,14.98 1.17,20.85 0.39,5.87 0.99,10.75 1.7,14.73 0.71,3.92 1.43,7.24 2.22,9.91l0 0.79 -45.68 0 0 -0.79c0.78,-2.67 1.5,-5.99 2.15,-9.91 0.58,-3.97 1.17,-8.86 1.68,-14.73 0.53,-5.87 0.92,-12.77 1.18,-20.85 0.2,-8.13 0.33,-17.58 0.33,-28.4l0 -182.25zm469.46 57.98c0,-10.81 -0.13,-20.26 -0.39,-28.35 -0.26,-8.07 -0.65,-15.05 -1.18,-20.97 -0.45,-5.93 -1.04,-10.89 -1.69,-14.79 -0.65,-3.98 -1.31,-7.24 -2.08,-9.98l0 -0.71 33.94 0 0 0.71c-0.72,2.74 -1.51,6 -2.15,9.98 -0.72,3.9 -1.31,8.86 -1.76,14.79 -0.46,5.93 -0.79,12.9 -1.11,20.97 -0.32,8.09 -0.52,17.54 -0.52,28.35l0 103.09c0,18.24 -2.6,33.74 -7.81,46.59 -5.21,12.83 -12.45,23.39 -21.77,31.59 -9.24,8.22 -20.39,14.21 -33.35,17.92 -13.03,3.78 -27.18,5.67 -42.61,5.67 -15.38,0 -29.72,-1.83 -43.01,-5.34 -13.36,-3.59 -24.89,-9.32 -34.8,-17.27 -9.83,-7.94 -17.58,-18.3 -23.2,-30.95 -5.6,-12.64 -8.39,-28.07 -8.39,-46.26l0 -105.04c0,-10.81 -0.07,-20.26 -0.34,-28.35 -0.26,-8.07 -0.64,-15.05 -1.17,-20.97 -0.52,-5.93 -1.1,-10.89 -1.83,-14.79 -0.71,-3.98 -1.43,-7.24 -2.15,-9.98l0 -0.71 45.82 0 0 0.71c-0.79,2.74 -1.51,6 -2.23,9.98 -0.71,3.9 -1.31,8.86 -1.82,14.79 -0.53,5.93 -0.91,12.9 -1.1,20.97 -0.27,8.09 -0.4,17.54 -0.4,28.35l0 107.12c0,15.13 2.22,27.63 6.78,37.48 4.49,9.9 10.43,17.71 17.86,23.52 7.36,5.79 15.76,9.83 25.14,12.12 9.45,2.29 19.03,3.46 28.87,3.46 9.78,0 19.42,-1.17 28.8,-3.46 9.45,-2.28 17.78,-6.33 25.08,-12.12 7.36,-5.81 13.29,-13.62 17.78,-23.52 4.49,-9.85 6.78,-22.35 6.78,-37.48l0 -107.12zm234.05 124.26c0,10.82 0.19,20.27 0.46,28.4 0.33,8.08 0.72,14.98 1.17,20.85 0.47,5.87 1.04,10.75 1.7,14.73 0.72,3.92 1.43,7.24 2.22,9.91l0 0.79 -45.8 0 0 -0.79c0.79,-2.67 1.49,-5.99 2.21,-9.91 0.65,-3.97 1.24,-8.86 1.69,-14.73 0.47,-5.87 0.85,-12.77 1.19,-20.79 0.26,-8.01 0.45,-17.52 0.45,-28.47l0 -124.26c0,-10.81 -0.19,-20.26 -0.45,-28.35 -0.34,-8.07 -0.72,-15.05 -1.19,-20.91 -0.45,-5.81 -1.04,-10.75 -1.69,-14.79 -0.72,-3.98 -1.42,-7.3 -2.21,-10.04l0 -0.71 8.01 0.71c2.42,0.27 5.15,0.47 8.14,0.53 2.94,0.06 6.06,0.06 9.26,0.06 4.95,0 11.67,-0.59 20.13,-1.83 8.47,-1.18 19.23,-1.76 32.32,-1.76 12.25,0 23.52,1.63 33.88,4.95 10.43,3.32 19.43,8.15 27.04,14.47 7.62,6.39 13.56,14.21 17.86,23.39 4.24,9.26 6.39,19.75 6.39,31.42 0,9.18 -1.18,17.65 -3.53,25.47 -2.34,7.88 -5.66,14.93 -9.96,21.31 -4.24,6.38 -9.39,11.99 -15.32,16.88 -5.99,4.94 -12.71,9.05 -20.06,12.31l66.97 94.15c3.32,4.69 6.39,8.73 9.25,12.19 2.87,3.45 5.61,6.38 8.22,8.86 2.61,2.47 5.15,4.56 7.55,6.13 2.42,1.63 4.89,2.87 7.43,3.72l0 0.79 -55.12 0c-0.38,-2.41 -1.63,-5.61 -3.77,-9.65 -2.09,-4.04 -4.49,-8.02 -7.3,-11.91l-67.57 -95.27c-2.93,0.26 -5.86,0.46 -8.79,0.65 -2.94,0.2 -5.93,0.33 -9,0.33 -3.58,0 -7.16,-0.13 -10.75,-0.39 -3.64,-0.26 -7.3,-0.71 -11.01,-1.37l0 42.95zm0 -57.8c3.45,0.72 6.97,1.31 10.49,1.63 3.59,0.32 7.03,0.45 10.29,0.45 9.58,0 18.32,-1.42 26.2,-4.29 7.89,-2.88 14.6,-7.24 20.13,-13.1 5.53,-5.8 9.83,-13.1 12.9,-21.83 3.06,-8.73 4.56,-18.96 4.56,-30.62 0,-9.59 -1.1,-18.25 -3.25,-26.01 -2.16,-7.75 -5.36,-14.32 -9.66,-19.73 -4.24,-5.41 -9.64,-9.58 -16.09,-12.58 -6.52,-2.99 -14.08,-4.49 -22.74,-4.49 -8.8,0 -15.77,0.45 -20.98,1.3 -5.21,0.91 -9.19,1.9 -11.86,2.88l0 126.4zm492.13 132.47l0 -0.79c0.27,-0.58 0.47,-1.56 0.59,-2.87 0.13,-1.24 0.19,-2.42 0.19,-3.4 0,-3.96 -0.51,-8.34 -1.63,-13.09 -1.1,-4.75 -3.12,-10.75 -6.19,-17.86l-23.13 -51.93c-7.1,-0.26 -16.62,-0.38 -28.41,-0.38 -11.85,0 -24.62,0 -38.37,0 -10.02,0 -19.75,0 -29.13,0 -9.3,0 -17.78,0.13 -25.27,0.38l-21.96 50.44c-1.9,4.68 -3.92,9.83 -6.14,15.44 -2.15,5.61 -3.19,11.28 -3.19,17 0,1.63 0.06,3 0.32,4.11 0.27,1.04 0.53,1.76 0.79,2.15l0 0.79 -38.97 0 0 -0.79c2.36,-2.41 5.21,-6.71 8.6,-12.84 3.46,-6.19 7.23,-13.94 11.28,-23.2l109.4 -242.65 15.25 0 103.68 233.26c2.4,5.48 4.94,10.83 7.55,15.96 2.6,5.15 5.01,9.72 7.37,13.83 2.27,4.03 4.3,7.49 6.05,10.28 1.83,2.81 2.99,4.64 3.65,5.35l0 0.79 -52.33 0zm-123.66 -106.73c7.37,0 14.92,0 22.67,-0.06 7.83,-0.06 15.38,-0.13 22.88,-0.19 7.43,-0.06 14.6,-0.14 21.44,-0.2 6.91,-0.06 13.09,-0.19 18.7,-0.26l-53.63 -121.26 -52.71 121.97 20.66 0z"/>
+
+  <path class="dg-body dg-stroke-body" d="M6277.31 7617.96c15.05,0 28.86,-0.65 41.44,-1.89 12.57,-1.31 23.58,-2.73 33.03,-4.36 10.95,-1.82 20.92,-3.91 29.97,-6.33l-5.54 30.89c-1.56,-0.13 -3.83,-0.19 -6.9,-0.32 -3.06,-0.13 -6.45,-0.26 -10.23,-0.39 -3.72,-0.13 -7.68,-0.26 -11.79,-0.33 -4.17,-0.06 -8.09,-0.13 -11.73,-0.19 -3.72,-0.06 -6.98,-0.13 -9.84,-0.19 -2.87,-0.06 -4.95,-0.06 -6.18,-0.06l-82.5 0 0 -0.79c0.79,-2.67 1.5,-5.99 2.22,-9.91 0.64,-3.97 1.3,-8.86 1.76,-14.73 0.51,-5.87 0.9,-12.77 1.17,-20.85 0.26,-8.13 0.38,-17.58 0.38,-28.4l0 -124.26c0,-10.81 -0.13,-20.26 -0.38,-28.35 -0.26,-8.07 -0.66,-15.05 -1.17,-20.97 -0.47,-5.93 -1.12,-10.89 -1.76,-14.79 -0.72,-3.98 -1.43,-7.24 -2.22,-9.98l0 -0.71 45.8 0 0 0.71c-0.79,2.74 -1.5,6 -2.21,9.98 -0.66,3.9 -1.24,8.86 -1.71,14.79 -0.45,5.93 -0.83,12.9 -1.17,20.97 -0.26,8.09 -0.45,17.54 -0.45,28.35l0 182.12z"/>
+
+  <polygon class="dg-body" points="2911.31,7099.94 2911.31,7098.74 16.36,7065.34 2911.31,7015.25 2911.31,7013.45 2968.4,7014.29 3016.25,7013.45 3016.25,7014.96 6489.85,7065.34 3016.25,7098.92 3016.25,7099.94 2968.4,7099.39 "/>
+
+  <g id="_2424933851312">
+
+   <path class="dg-body" d="M2801.09 2674.21c-10.35,-0.7 -12.07,0.02 -17.74,-6.67 -33.67,-1.77 -151.22,-99.91 -173.15,-118.3 -8.02,-6.72 -11.56,-11.18 -19.65,-17.47l-55.44 -53.3c-54.78,-59.68 -139.22,-185.83 -176.64,-261.08 -30.37,-61.04 -45.34,-84.42 -69.75,-150.55 -5.17,-13.99 -11.66,-43.54 -18.21,-53.39 0,12.38 -0.26,24.98 -0.11,37.32l6.14 105.28c2.55,20.57 5.82,42.95 10.92,63.37 12.26,49.18 37.43,115.08 52.57,175.58 9.64,38.57 19.7,84 25.22,126 19.87,151.55 -10.85,258.08 -8.43,276.15 8.67,64.87 4.12,61.19 21.42,130.01 10.57,42.07 17.98,81.33 30.56,120.66 50.63,158.3 96.29,283.77 170.34,431.87 89.39,178.78 203.92,349.21 302.36,525.35l242.36 439.43c22.86,45.73 27.85,49.57 49.02,102.19 35.16,87.35 88.26,245.55 111.58,339.42 16.61,66.87 26.38,123.47 33.56,191.92l8.36 142.86c-0.06,12.13 -0.47,25.22 -0.11,37.25 0.43,14.11 2.88,19.97 2.78,37.02 -0.67,116.65 5.28,247.29 5.28,371.43l-2.66 74.29c11.07,-2.96 5.62,-0.48 8.76,-9.82 9.15,-27.37 66.74,-152.59 85.01,-193.55 65.89,-147.69 154.79,-404.65 181.8,-563.65 4.78,-28.17 11.08,-70.13 10.9,-100.53 -0.11,-17.1 2.92,-22 2.92,-37.08l-5.93 -68.56c-21.38,-148.84 -98.53,-363.19 -182.67,-488.51 -31.66,-47.16 -78.59,-288.81 -92.6,-358.4 -22.26,-110.5 -20.36,-271.72 -18.9,-389.85 0.19,-15.05 2.83,-18.35 2.86,-34.29 0.03,-24.81 -0.22,-49.66 -0.18,-74.47 0.02,-15.93 2.66,-19.23 2.85,-34.29 0.79,-64.87 8.16,-121.73 7.81,-180.53l4.22 -70.06c3,-19.85 -2.43,-193.96 -4.34,-218.92 -8.72,-113.64 -22.6,-276.74 -83.65,-364.68 -12.71,-18.31 -21.98,-24.18 -34.79,-39.49 -48.44,-57.95 -91.24,-89 -145.89,-135.31 -48.57,-41.15 -87.76,-68.76 -137.61,-106.46 -33.44,-25.29 -158.12,-112.29 -186.84,-112.93 0,20.42 51,252.15 57.64,305.81 2.83,22.88 1.53,47.04 4.91,69.38 2.79,18.46 0.27,108.12 -4.77,133.61 -0.15,0.72 -0.4,1.5 -0.56,2.12l-1.51 3.87z"/>
+
+   <path class="dg-red" d="M2277.26 1978.23c1.4,6.12 2.05,6.13 2.66,13.28 6.56,9.85 13.05,39.39 18.2,53.39 24.42,66.12 39.39,89.5 69.75,150.55 37.43,75.25 121.87,201.39 176.64,261.07l55.44 53.3c8.09,6.29 11.62,10.75 19.64,17.47 21.94,18.39 139.49,116.54 173.15,118.31 5.68,6.68 7.39,5.96 17.74,6.66 -2.15,-8.29 -70.08,-123.59 -83.37,-155.5 -21.37,-51.31 -24.31,-69.74 -40.32,-118.86 -52.18,-160.21 -74.88,-318.45 -45.37,-489.06 10.82,-62.57 31.98,-124.06 60.26,-178.5l10.83 -18.35c5.91,-8.13 4.65,-3.02 9.33,-11.91l8.72 -22.77c19.78,-47.8 90.86,-120.57 127.68,-149.73l295.64 -233.77c72.85,-54.94 144.8,-121.36 209.08,-186.21 3.93,-3.97 6.45,-6.91 10.73,-10.49 20.86,-17.43 78.69,-82.6 96.26,-105.36 13.72,-17.77 28.61,-30.35 44.23,-45.97l453.68 -474.83c8.76,-8.69 12.23,-15.11 21.15,-23.93 74.12,-73.29 59.02,-60.78 140.8,-127.15 33.87,-27.5 64.11,-52.08 101.04,-76.71 34.01,-22.67 49.65,-29.62 83,-49.66l23.22 -13.69c3.98,-3.64 1.3,-0.15 3.05,-4.04 0.57,-0.44 1.35,-1 1.74,-1.28 0.41,-0.26 1.25,-0.9 1.75,-1.24l92.58 -45.79c33.13,-13.71 69.64,-25.44 107.57,-33.24 74.32,-15.3 120.82,-15.25 195.44,-11.67 10.78,0.52 21.14,0.94 31.6,2.82 7.85,1.42 25.15,7.5 29.77,0.66 -17.9,-12.69 -38.39,-15.45 -61.43,-19.82 -56.87,-5.22 -103.81,-21.06 -159.92,-1.85 -119.71,-13.87 -306.99,82.92 -393.13,131.35 -105.56,59.34 -198.81,132.89 -289.18,209.63l-150.88 146.21c-29.55,26.17 -71.99,77.85 -97.46,101.45 -25.15,23.28 -100.6,113.81 -126.97,138.41 -14.28,13.3 -20.75,20.89 -32.24,34.08l-201.48 196.46c-109.04,100.86 -279.13,183.19 -411.41,251.8 -239.82,124.43 -487.32,221.35 -562.25,498.87 -19.33,71.55 -19.51,205.33 -36.95,225.59z"/>
+
+   <path class="dg-body" d="M920.82 1837.16c17.84,-32.06 38.83,-71.26 42.4,-77.24l77.16 -111.19c4.28,-4.76 5.83,-5.59 10.12,-11.1 5.04,-6.48 5.29,-7.13 11.03,-12.85l59.85 -59.53c84.87,-70.96 124.29,-113.08 226.52,-174.06 133.92,-79.88 276.53,-129.16 438.57,-129.16 136.58,0 147.14,-0.95 280.54,27.19 15.47,3.27 44.15,12.61 61.68,12.61 0,-39.1 2.95,-44.79 17.05,-78.45 27.22,-64.97 44.28,-90.72 124.3,-122.42 41.11,-16.28 80.95,-28.04 127.25,-37.23 30.76,-6.11 117.17,-21.88 145.24,-21.88 -13.49,-8.56 -88.41,-10.5 -106.2,-10.53 -16.41,-0.02 -20.55,-2.8 -36.96,-2.83 -53.61,-0.07 -99.3,-2.57 -153.96,-2.57l-475.63 7.2c-81.97,10.63 -167.97,17.18 -245.62,48.85 -39.98,16.3 -156.7,82.28 -188.32,106.15 -23.57,17.79 -43.11,34.65 -64.67,54.7l-30.48 27.87c-22.97,22.11 -74.34,65.17 -91.31,86.44 -17.63,22.09 -37.95,38.98 -55.7,61.02 -24.13,29.95 -30.25,34.15 -52.15,67.24 -51.44,77.71 -101,132.22 -132.21,223.27 -4.15,12.12 -10.07,30.7 -14.74,49.63 -8.22,33.24 -30.05,180.06 26.24,78.84z"/>
+
+   <path class="dg-body" d="M2892.73 500.67c0,125.69 42.82,179.95 -23.85,313.06 -8.32,16.61 -20.03,36.6 -32.53,49.72 -11.95,12.55 -1.31,4.78 -19.76,20.03 -24.07,19.89 -32.41,31.96 -68.73,55.96l-49.91 32.33c-51.66,30.64 -97.45,41.03 -100.73,42.84 -4.3,2.37 -3.18,0.12 -5,5.05 -4.25,11.48 -1.21,2.96 0.72,6.28 4.96,10.12 19.19,6.86 36.35,4.53 14.05,-1.9 29.23,-0.68 45.76,-2.01 95.77,-7.66 202.88,-46.01 280.23,-101.79l51.97 -43.54c4.64,-5.6 4.97,-7.26 10.77,-13.09 21.14,-21.26 62.37,-73.07 68.36,-98.77 6.86,3.29 22.38,8.96 30.82,11.62 88.16,27.78 155.18,-43.47 186.74,-107.11 47.42,-95.62 55.69,-152.57 55.69,-260 0,-70.15 -30.68,-154.43 -66.93,-187.75 -135.36,-124.47 -399.98,1.8 -399.98,272.65z"/>
+
+   <path class="dg-yellow" d="M2225.47 1681.2c7.75,-34.93 10.41,-80.85 16.27,-117.71 18.71,-117.41 55.46,-185.82 147.18,-256.08 127.17,-97.42 400.68,-151.01 579.56,-226.88 115.8,-49.12 238.04,-121.11 328.7,-207.25l36.57 -32.36c23.55,-19.75 45.16,-43.04 65.44,-67.22 9.44,-11.26 19.72,-24.46 25.58,-39.58 -19.39,5.73 -65.09,43.13 -82.57,56.86 -27.73,21.77 -51.77,42.09 -79.96,63.3 -28.14,21.17 -55.58,38.63 -86.17,57.09 -286.2,172.78 -568.9,123.99 -806.3,193.84 -37.07,10.9 -72.84,21.9 -103.99,39.26 -29.42,16.4 -59.02,38.65 -74.38,68.88l-31.03 75.08c-9.46,36.59 -1.42,126.66 3.56,166.51 5.25,41.94 12.38,82.39 20.64,122.61 3.94,19.16 9.13,37.6 14.76,56.87 4.43,15.14 12.01,39.59 26.12,46.79z"/>
+
+   <path class="dg-blue" d="M2266.64 1939.94c2.99,4.32 3.77,13.04 4.54,17.88 2.15,13.58 0.75,10.53 6.08,20.4 17.44,-20.27 17.62,-154.04 36.95,-225.59 74.93,-277.52 322.43,-374.44 562.25,-498.87 132.28,-68.62 302.37,-150.94 411.41,-251.8l201.48 -196.46c11.49,-13.19 17.96,-20.78 32.24,-34.08 26.38,-24.6 101.82,-115.12 126.97,-138.41 25.47,-23.6 67.91,-75.28 97.46,-101.45l150.88 -146.21c90.37,-76.74 183.62,-150.29 289.18,-209.63 86.14,-48.42 273.42,-145.22 393.13,-131.35 56.11,-19.21 103.06,-3.37 159.92,1.85 23.04,4.37 43.53,7.13 61.43,19.82 8.66,9.68 27.58,12.2 42.05,17.81l7.95 0.35c-25.17,-37.64 -140.96,-68.02 -200.83,-77.78 -87.15,-14.2 -174.4,-3.3 -249.63,17.24 -73.55,20.06 -177.67,66.18 -244.08,106.1 -142.81,85.85 -220.93,144.23 -347.67,246.58l-75.34 65.27c-7.88,8.02 -12.28,10.15 -19.91,17.23 -6.81,6.3 -9.92,10.85 -17.67,16.83l-36.72 32.26c-7.79,7.58 -12.42,10.36 -19.86,17.27 -22.27,20.71 -27.93,22.36 -54.37,49.1 -7.81,7.89 -12.37,10.17 -19.95,17.18 -12.34,11.42 -22.17,22.81 -34.4,34.57 -20.01,19.26 -51.64,45.21 -71.57,69.04 -11.93,14.28 -20.72,25.36 -33.8,39.01 -5.86,15.13 -16.14,28.33 -25.57,39.58 -20.3,24.19 -41.9,47.48 -65.45,67.23l-36.57 32.36c-90.67,86.14 -212.9,158.13 -328.69,207.25 -178.89,75.86 -452.4,129.46 -579.57,226.88 -91.72,70.26 -128.47,138.68 -147.18,256.09 -5.87,36.84 -8.53,82.78 -16.27,117.7 -2.12,11.35 -2.22,25 -0.89,36.75 8.29,73.29 13.43,150.81 42.05,222z"/>
+
+   <path class="dg-body" d="M4340.1 155.79l105.7 -46.62c89.47,-35.91 163.18,-42.28 264.26,-41.03 19.1,0.23 82.34,6.2 100.33,13.74 9.18,3.85 18.22,7.59 32.21,7.59 2.15,-3.5 3.51,3.19 0,-5.61 -14.46,-5.61 -33.39,-8.13 -42.04,-17.81 -4.62,6.85 -21.92,0.76 -29.77,-0.66 -10.44,-1.88 -20.82,-2.3 -31.6,-2.82 -74.62,-3.58 -121.11,-3.63 -195.44,11.67 -37.92,7.81 -74.43,19.54 -107.57,33.24l-92.59 45.79c-0.49,0.34 -1.34,0.97 -1.74,1.25 -0.4,0.27 -1.18,0.83 -1.74,1.27z"/>
+
+   <path class="dg-body" d="M5954.28 1317.5c29.55,48.35 127.76,177 7.49,93.75 -14.35,-9.92 -28.8,-19.68 -44.34,-27.01 -12.04,-5.67 -24.78,-9.91 -38.67,-11.67 -71.69,-12.75 -134.97,34.14 -182.46,82.22 -127.71,136.05 -236.88,309.9 -355.08,483.45 -351.45,516.07 -853.37,888.01 -1510.9,805.9 -78.75,-8.96 -155.08,-30.18 -227.29,-61.19 -29.73,-12.76 -107.88,-59.04 -181.6,-105.86 -28.79,-18.28 -57.65,-35.67 -81.88,-52.2 -64.39,-43.9 -58.16,-43.87 15.72,-44.89 37.49,-0.5 75.12,1.82 112.69,0.99 152.16,-5.2 304.43,-25.98 451.36,-66.13 61.31,-16.75 121.72,-36.91 180.78,-60.7 639.45,-251.48 1413,-1752.8 1854.19,-1036.65z"/>
+
+   <path class="dg-body" d="M5683.75 1765.54c114.66,-39.96 235.76,-13.71 346.41,29.74 17.4,6.83 34.59,14.11 51.41,21.61 33.98,15.1 86.72,50.22 116.59,72.08 42.52,31.11 -13.64,19.29 -139.91,56.21 -31.39,9.18 -58.41,29.8 -84.02,50.1 -106.41,92.04 -153.4,229.44 -241.99,335.75 -59.12,84.45 -130.12,160.18 -213.04,221.45 -97.71,80.4 -205.93,148.84 -324.9,193.18 -115.64,45.37 -235.93,81.51 -360.25,91.42 -185.3,16.81 -372.01,4.98 -556.08,-18.62 176.38,-42.22 360.56,-61.46 526.51,-139.42 142.87,-66.73 267.31,-170.71 362.17,-296.27 97.71,-115.63 169.09,-249.9 251.62,-376.16 67.02,-99.52 147.32,-201.49 265.48,-241.08z"/>
+
+   <path class="dg-body" d="M5464.03 2800.84c11.16,-9.87 21.87,-21.08 33.3,-31.14 3.99,-3.51 8.08,-6.88 12.3,-10.01 70.95,-52.54 28.63,46.86 15.65,80.05 -17.07,43.65 -39.47,85.68 -58.42,128.17 -64.8,135.58 -140.13,271.35 -257.29,369.06 -67.27,61.71 -159.68,79.02 -249.27,76.02 -237.86,-7.86 -581.06,-198.65 -793.73,-325.01 -129.38,-84.55 -269.93,-150.67 -412.39,-209.88 61.36,57.79 128.58,109.04 189.95,166.95 73.5,65.3 135.99,141.55 199.87,216.06 195.8,245.41 371.82,490.96 729.93,420.71 28.84,-5.02 57.48,-13.34 86.42,-18.92 10.81,-2.08 21.67,-3.78 32.58,-4.78 84.89,-7.78 -4.47,49.26 -32.11,67.5 -6.27,4.14 -12.55,8.27 -18.65,12.5 -107.74,69.86 -220.54,140.84 -350.13,159.37 -87.69,16.31 -173.65,-30.16 -237.02,-86.58 -48.55,-37.18 -95.81,-114.41 -131.71,-166.07 -78.28,-112.63 -176.34,-260.43 -215.9,-338.45 -50.22,-104.3 -119.17,-197.85 -185.6,-292.01 -29.37,-38.99 -56.5,-80.09 -91.63,-114.12 33.41,87.08 81.82,167.67 115.64,254.65 8.53,20.98 16.75,40.95 24.83,59.95 97.72,229.86 187.51,628.08 480.99,697.59 13.96,3.31 28.06,6.24 42.11,9.21 26.8,5.64 126.42,16.59 70.16,41.28 -23.23,10.18 -49.99,12.43 -74.58,17.88 -120.69,20.15 -251.01,37.56 -366.74,-12.65 -141.09,-82.93 -189.55,-472.98 -247.56,-750.37 -24,-129.61 -52.66,-262.76 -123.33,-375.75 -26.07,-23.16 -61.92,-30.74 -93.89,-45.12 -45.05,-20.27 -55.76,-37.59 3.89,-35.26 25.79,1.01 51.64,5.12 77.36,6.96 254.91,30.03 500.89,107.12 741.97,192.94 24.74,8.81 49.46,17.72 74.11,26.68 224,96.13 533.55,119.41 759.29,11.15 97.71,-45.26 174.56,-123.33 249.59,-198.56z"/>
+
+   <path class="dg-body" d="M4718.95 708.86c-50.31,63.87 -96.23,131.21 -128.73,206.06 -81.61,165.55 -144.89,339.3 -221.74,507.08 -22.88,54.47 -51.03,107.03 -68.44,163.62 70.28,-147.83 159.17,-285.83 238.65,-428.8 317.41,-508.07 682.83,-657.62 893.86,-589.9 131.8,41.03 239.14,131.81 322.22,240.29 25.6,33.42 48.92,68.54 69.92,104.38 24.28,44.28 44.15,80.23 59.3,108.49 84.16,156.95 -15.72,52.01 -74.62,2.94 -25.27,-21.04 -54.36,-36.39 -85.42,-47.33 -46.98,-16.52 -98.55,-22.98 -148.55,-23.91 -89.51,-3.14 -177,29.87 -249.69,80.5 -52.8,34.78 -100.29,75.73 -145.42,119.28 -169.97,163.94 -232.75,268.58 -377.33,444.05 -156.59,190.04 -327.69,368.46 -524.2,517.54 -149.65,114.31 -317.93,207.25 -499.98,257.88 -173.96,49.11 -362.28,52.66 -535.22,-2.12 -20.72,-6.68 -40.41,-15.74 -59.01,-26.62 -86.31,-50.48 -90.4,-54.07 -3.92,-59.6 156.8,-10.01 314.62,-39.07 452.77,-116.6 157.23,-86.06 287.65,-216.67 381,-369.16 57.93,-95.78 114.41,-195.12 142.97,-304.06 -24.29,6.48 -29.26,33.31 -40.3,52.35 -77.66,164.94 -184.68,317.33 -321.07,438.92 -188.64,164.22 -440.25,267.2 -692.66,246.55 -90.22,-7.5 -203.16,-58.01 -251.7,-141.58 -24.86,-42.84 -50.95,-104.27 14.27,-43.06 79.25,74.38 82.08,101.98 259.51,124.7 149.45,-1.73 297.78,-64.4 404.9,-168.28 472.71,-677.93 268.66,-1261.22 1262.7,-1524.47 511.49,-135.45 97.63,13.03 -74.06,230.86z"/>
+
+   <path class="dg-body" d="M288.41 3394.39c15.64,144.16 24.36,127.39 48.62,25.34 2.6,-10.96 8.66,-20.56 15.24,-29.46 31.96,-48.07 85.78,-51.01 131.86,-44.46 126.87,22.18 260.66,80.25 399.05,133.14 411.52,157.29 838.45,133.97 1147,-283.3 51.55,-68.15 90.36,-149.62 117.02,-237.59 4.1,-13.52 14.24,-54.9 24.79,-100.3 6.98,-30.05 14.49,-61.81 19.83,-88.56 10.04,-50.3 8.47,-54.18 -28.75,-13.34 -19.13,20.99 -38.8,41.8 -58.8,61.83 -1.8,1.76 -3.61,3.51 -5.4,5.25 -80.56,77.92 -167.72,145.65 -260.36,197.98 -39.52,22.33 -80.07,41.85 -121.52,58.16 -445.97,180.75 -1512.65,-413.66 -1428.58,315.3z"/>
+
+   <path class="dg-body" d="M627.55 3549.96c-95.11,43.94 -151.61,160.5 -192.81,271.75l-9.67 41.91 -9.7 42.01c-8.44,65.58 0.52,37.18 33.07,5.97 13.91,-13.35 31.74,-21.21 48.71,-28.55 25.45,-11.02 52.3,-17 79.28,-17.36 96.31,4.02 181.45,71.5 274.72,95 68.18,24.85 138.75,37.26 209.2,33.28 86.63,0.89 173.51,-12.12 255.41,-47.42 80.61,-32.76 159.58,-74.34 229.13,-135.96 104.55,-90.47 197.22,-201.15 283.33,-318.38 -111.06,68.29 -216.09,156.48 -337.42,194.77 -104.29,33.21 -215.32,31.01 -320.34,-2.11 -102.14,-24.81 -198.69,-76.76 -297.56,-117.14 -78.96,-30.76 -165.97,-55.86 -245.34,-17.79z"/>
+
+   <path class="dg-body" d="M1270.74 4247.38c55.75,33.61 113.51,65.21 173.14,85.7 40.54,13.93 81.98,22.72 124.26,23.51 62.45,4.94 118.51,-34.12 164.16,-85.41 121.24,-136.11 217.15,-454.38 272.99,-657.11 30.6,-128.56 75.16,-250.74 123.78,-369.28 -6.72,72.98 -19.4,144.75 -26.07,217.82 -9.78,84.77 -8.96,170.9 -9.63,256.63 5.42,274.34 21.28,537.89 -197.4,687.06 -62.14,44.63 -160.71,90.21 -10.99,75.75 87.25,-11.79 177.64,-25.58 253.74,-84.26 53.16,-37.13 77.76,-115.96 86.14,-189.11 9.07,-51.95 -0.16,-130.38 -4.08,-185.2 -8.56,-119.54 -22.24,-273.83 -35.86,-348.58 -19.6,-98.45 -24.65,-199.89 -31.3,-300.37 -1.77,-42.63 -5.65,-85.46 -2.21,-127.89 20.82,77.52 30.95,158.86 51.52,236.54 4.77,18.93 9.25,37.02 13.37,54.37 49.99,209.84 178.28,529.68 55.04,738.25 -58.13,98.37 -83.85,137.87 30.17,52.52 65.88,-49.28 131.83,-106.78 166.86,-195.58 37.44,-133.9 -108.92,-425.46 -200.66,-645.76 -44.49,-101.23 -88.1,-207.41 -100.82,-323.02 2.99,-25.87 14.86,-47.88 24.75,-70.93 39.11,-91.07 -9.6,-38.7 -38.11,-1.53 -4.06,5.3 -8.14,10.57 -12.33,15.65 -120.42,160.53 -215.42,348.13 -304.03,538.96 -9.09,19.59 -18.12,39.23 -27.11,58.87 -75.1,188.44 -227.14,374.44 -393.15,425.02 -53.01,17.12 -107.98,15.49 -162.51,9.49 -195.37,-21.48 -141.11,6.17 16.31,107.9z"/>
+
+   <path class="dg-body" d="M443.97 2237.22c-16.22,10.75 -32.53,21.58 -48.3,33.5 -62.32,47.12 -23.46,35.26 19.61,26.04 73.47,-15.71 126.08,-27.39 208.26,-6.81 69.57,17.43 139.14,39.17 202.7,81.07 115.68,67.58 225.37,150.8 339.55,222.5 35.98,24.42 73.88,44.64 107.93,73.49 -101.93,-61.75 -209.31,-106.62 -313.94,-160.02 -390.15,-170.58 -647.57,-71.25 -728.39,90.77 -66.76,131.25 -74.05,297.3 -53.8,449.7 4.02,23.72 7.52,47.67 11.37,71.55 32.41,201.03 32.81,66.7 53.16,-29.68 12.59,-59.63 46.4,-110.81 83.86,-151.62 45.55,-51.34 105.95,-77.02 166.36,-82.6 42.99,-5.4 85.92,-3.7 128.76,1.06 161.3,17.91 240.3,54.47 393.37,94.15 165.78,42.98 334.05,70.1 502.72,63.31 128.8,-4.64 257.95,-34.03 375.68,-99.72 112.82,-62.28 213.12,-163.41 279.66,-295.7 3.6,-7.23 6.87,-14.68 9.82,-22.3 59.15,-152.33 3.79,-85.04 -53.13,-37.11 -76.27,64.23 -159.29,116.08 -250.38,135.99 -120.33,27.99 -246.23,10.98 -362.31,-41.27 -72.55,-33.2 -145.91,-69.62 -208.86,-127.92 15.59,-8.95 30.01,6.56 44.19,13.4 113.34,69.33 236.56,114 361.62,121.62 171.21,7.82 348.46,-60.57 471.7,-213.37 40.33,-50.14 78.09,-140.49 71.49,-221.9 -1.06,-13.09 -2.99,-26.06 -6.8,-38.41 -12.64,-41 -17.31,-40.01 -19.83,1.84 -0.75,12.41 -0.63,24.06 -0.94,35.53 -1.4,50.3 -7.63,97.74 -81.89,194.36 -9.67,9.9 -19.73,19.17 -30.12,27.8 -74.68,61.97 -166.81,90.75 -256.26,80.51 -569.48,-209.05 -708.21,-752.48 -1416.86,-289.75z"/>
+
+  </g>
+
+ </g>
+
+</svg>
+
+
+
+                        </div>
+
+                        <div style="text-align: center;">
+
+                            <p style="font-family:var(--font-mono); font-size:0.75rem; margin-bottom:0; color:var(--text-secondary);">DANZAS_GUANTA.svg (Modo Adaptativo)</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Diapositivas Oficiales del Símbolo -->
+
+                <div class="logo-slide-grid">
+
+                    <div class="laminate-container" style="margin: 0;">
+
+                        <div class="laminate-frame" onclick="openLightbox(this)">
+
+                            <img src="manual_slide_06_simbolo.png" alt="Símbolo y Construcción Concepto" class="laminate-img zoomable">
+
+                            <div class="laminate-zoom-indicator">
+
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="laminate-caption">
+
+                            <span class="laminate-label">Lámina 04</span>
+
+                            <span class="laminate-desc">Símbolo: Estructura Concepto</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="laminate-container" style="margin: 0;">
+
+                        <div class="laminate-frame" onclick="openLightbox(this)">
+
+                            <img src="manual_slide_07_construccion.png" alt="Estructura Geométrica" class="laminate-img zoomable">
+
+                            <div class="laminate-zoom-indicator">
+
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="laminate-caption">
+
+                            <span class="laminate-label">Lámina 05</span>
+
+                            <span class="laminate-desc">Construcción y Retícula Geométrica</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN VI: ÁREA DE PROTECCIÓN (SIMULADOR INTERACTIVO) -->
+
+            <section id="proteccion">
+
+                <span class="section-label">Capítulo VI</span>
+
+                <h3 class="section-title">Área de Protección y Proporciones</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    Para garantizar la legibilidad y preeminencia visual de la marca gráfica, se establece un área de exclusión periférica que no debe ser invadida por elementos gráficos ajenos (texto, bordes u otras marcas). Este espacio se calcula basándose en el módulo <strong>X</strong>, equivalente al diámetro de la cabeza del isotipo.
+
+                </p>
+
+
+
+                <!-- Simulador Interactivo -->
+
+                <div class="sim-grid">
+
+                    <!-- Panel de Controles -->
+
+                    <div class="sim-controls">
+
+                        <h4 style="font-size:1.1rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem;">Simulador Técnico</h4>
+
+                        
+
+                        <!-- Slider Tamaño Logo -->
+
+                        <div class="sim-control-group">
+
+                            <div class="sim-control-header">
+
+                                <span>Escala del Logotipo</span>
+
+                                <span class="sim-control-value" id="val-logo-scale">1.0x</span>
+
+                            </div>
+
+                            <input type="range" class="sim-range-input" id="input-logo-scale" min="0.6" max="1.5" step="0.05" value="1.0">
+
+                        </div>
+
+
+
+                        <!-- Slider Margen de Seguridad -->
+
+                        <div class="sim-control-group">
+
+                            <div class="sim-control-header">
+
+                                <span>Margen Exclusión (U. Modular)</span>
+
+                                <span class="sim-control-value" id="val-safe-margin">1.5X</span>
+
+                            </div>
+
+                            <input type="range" class="sim-range-input" id="input-safe-margin" min="0.5" max="3.0" step="0.25" value="1.5">
+
+                        </div>
+
+
+
+                        <!-- Opciones de Visualización -->
+
+                        <div class="sim-control-group" style="gap:1rem; border-top:1px solid var(--border-color); padding-top:1.2rem;">
+
+                            <label class="sim-checkbox-label">
+
+                                <input type="checkbox" class="sim-checkbox" id="checkbox-grid" checked>
+
+                                <span>Mostrar Rejilla Métrica</span>
+
+                            </label>
+
+                            <label class="sim-checkbox-label">
+
+                                <input type="checkbox" class="sim-checkbox" id="checkbox-safe" checked>
+
+                                <span>Mostrar Caja de Protección</span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="sim-note">
+
+                            <strong>Norma:</strong> El área mínima de protección en todos sus lados debe ser de <strong>1.5X</strong>. En soportes de alta densidad informativa, no debe reducirse bajo ningún concepto de 1.0X.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Playground Visual del Simulador -->
+
+                    <div class="sim-playground" id="sim-playground-box">
+
+                        <!-- Capa Rejilla Métrica -->
+
+                        <div class="sim-grid-overlay visible" id="layer-grid"></div>
+
+
+
+                        <!-- Contenedor del Logo con Padding Dinámico (Área de Seguridad) -->
+
+                        <div class="sim-logo-wrapper" id="sim-logo-wrapper">
+
+                            <!-- Capa Caja de Seguridad (Borde e indicador visual) -->
+
+                            <div class="sim-safe-overlay visible" id="layer-safe">
+
+                                <span class="sim-safe-label" id="layer-safe-text">ZONA DE EXCLUSIÓN (1.5X)</span>
+
+                            </div>
+
+
+
+                            <!-- Logotipo SVG a Escalar -->
+
+                            <div class="sim-logo-container" id="sim-logo-container">
+
+<svg class="sim-logo-svg" viewBox="0 100 6489.85 4200">
+
+                                    <g id="_2424933851312">
+
+   <path class="dg-body" d="M2801.09 2674.21c-10.35,-0.7 -12.07,0.02 -17.74,-6.67 -33.67,-1.77 -151.22,-99.91 -173.15,-118.3 -8.02,-6.72 -11.56,-11.18 -19.65,-17.47l-55.44 -53.3c-54.78,-59.68 -139.22,-185.83 -176.64,-261.08 -30.37,-61.04 -45.34,-84.42 -69.75,-150.55 -5.17,-13.99 -11.66,-43.54 -18.21,-53.39 0,12.38 -0.26,24.98 -0.11,37.32l6.14 105.28c2.55,20.57 5.82,42.95 10.92,63.37 12.26,49.18 37.43,115.08 52.57,175.58 9.64,38.57 19.7,84 25.22,126 19.87,151.55 -10.85,258.08 -8.43,276.15 8.67,64.87 4.12,61.19 21.42,130.01 10.57,42.07 17.98,81.33 30.56,120.66 50.63,158.3 96.29,283.77 170.34,431.87 89.39,178.78 203.92,349.21 302.36,525.35l242.36 439.43c22.86,45.73 27.85,49.57 49.02,102.19 35.16,87.35 88.26,245.55 111.58,339.42 16.61,66.87 26.38,123.47 33.56,191.92l8.36 142.86c-0.06,12.13 -0.47,25.22 -0.11,37.25 0.43,14.11 2.88,19.97 2.78,37.02 -0.67,116.65 5.28,247.29 5.28,371.43l-2.66 74.29c11.07,-2.96 5.62,-0.48 8.76,-9.82 9.15,-27.37 66.74,-152.59 85.01,-193.55 65.89,-147.69 154.79,-404.65 181.8,-563.65 4.78,-28.17 11.08,-70.13 10.9,-100.53 -0.11,-17.1 2.92,-22 2.92,-37.08l-5.93 -68.56c-21.38,-148.84 -98.53,-363.19 -182.67,-488.51 -31.66,-47.16 -78.59,-288.81 -92.6,-358.4 -22.26,-110.5 -20.36,-271.72 -18.9,-389.85 0.19,-15.05 2.83,-18.35 2.86,-34.29 0.03,-24.81 -0.22,-49.66 -0.18,-74.47 0.02,-15.93 2.66,-19.23 2.85,-34.29 0.79,-64.87 8.16,-121.73 7.81,-180.53l4.22 -70.06c3,-19.85 -2.43,-193.96 -4.34,-218.92 -8.72,-113.64 -22.6,-276.74 -83.65,-364.68 -12.71,-18.31 -21.98,-24.18 -34.79,-39.49 -48.44,-57.95 -91.24,-89 -145.89,-135.31 -48.57,-41.15 -87.76,-68.76 -137.61,-106.46 -33.44,-25.29 -158.12,-112.29 -186.84,-112.93 0,20.42 51,252.15 57.64,305.81 2.83,22.88 1.53,47.04 4.91,69.38 2.79,18.46 0.27,108.12 -4.77,133.61 -0.15,0.72 -0.4,1.5 -0.56,2.12l-1.51 3.87z"/>
+
+   <path class="dg-red" d="M2277.26 1978.23c1.4,6.12 2.05,6.13 2.66,13.28 6.56,9.85 13.05,39.39 18.2,53.39 24.42,66.12 39.39,89.5 69.75,150.55 37.43,75.25 121.87,201.39 176.64,261.07l55.44 53.3c8.09,6.29 11.62,10.75 19.64,17.47 21.94,18.39 139.49,116.54 173.15,118.31 5.68,6.68 7.39,5.96 17.74,6.66 -2.15,-8.29 -70.08,-123.59 -83.37,-155.5 -21.37,-51.31 -24.31,-69.74 -40.32,-118.86 -52.18,-160.21 -74.88,-318.45 -45.37,-489.06 10.82,-62.57 31.98,-124.06 60.26,-178.5l10.83 -18.35c5.91,-8.13 4.65,-3.02 9.33,-11.91l8.72 -22.77c19.78,-47.8 90.86,-120.57 127.68,-149.73l295.64 -233.77c72.85,-54.94 144.8,-121.36 209.08,-186.21 3.93,-3.97 6.45,-6.91 10.73,-10.49 20.86,-17.43 78.69,-82.6 96.26,-105.36 13.72,-17.77 28.61,-30.35 44.23,-45.97l453.68 -474.83c8.76,-8.69 12.23,-15.11 21.15,-23.93 74.12,-73.29 59.02,-60.78 140.8,-127.15 33.87,-27.5 64.11,-52.08 101.04,-76.71 34.01,-22.67 49.65,-29.62 83,-49.66l23.22 -13.69c3.98,-3.64 1.3,-0.15 3.05,-4.04 0.57,-0.44 1.35,-1 1.74,-1.28 0.41,-0.26 1.25,-0.9 1.75,-1.24l92.58 -45.79c33.13,-13.71 69.64,-25.44 107.57,-33.24 74.32,-15.3 120.82,-15.25 195.44,-11.67 10.78,0.52 21.14,0.94 31.6,2.82 7.85,1.42 25.15,7.5 29.77,0.66 -17.9,-12.69 -38.39,-15.45 -61.43,-19.82 -56.87,-5.22 -103.81,-21.06 -159.92,-1.85 -119.71,-13.87 -306.99,82.92 -393.13,131.35 -105.56,59.34 -198.81,132.89 -289.18,209.63l-150.88 146.21c-29.55,26.17 -71.99,77.85 -97.46,101.45 -25.15,23.28 -100.6,113.81 -126.97,138.41 -14.28,13.3 -20.75,20.89 -32.24,34.08l-201.48 196.46c-109.04,100.86 -279.13,183.19 -411.41,251.8 -239.82,124.43 -487.32,221.35 -562.25,498.87 -19.33,71.55 -19.51,205.33 -36.95,225.59z"/>
+
+   <path class="dg-body" d="M920.82 1837.16c17.84,-32.06 38.83,-71.26 42.4,-77.24l77.16 -111.19c4.28,-4.76 5.83,-5.59 10.12,-11.1 5.04,-6.48 5.29,-7.13 11.03,-12.85l59.85 -59.53c84.87,-70.96 124.29,-113.08 226.52,-174.06 133.92,-79.88 276.53,-129.16 438.57,-129.16 136.58,0 147.14,-0.95 280.54,27.19 15.47,3.27 44.15,12.61 61.68,12.61 0,-39.1 2.95,-44.79 17.05,-78.45 27.22,-64.97 44.28,-90.72 124.3,-122.42 41.11,-16.28 80.95,-28.04 127.25,-37.23 30.76,-6.11 117.17,-21.88 145.24,-21.88 -13.49,-8.56 -88.41,-10.5 -106.2,-10.53 -16.41,-0.02 -20.55,-2.8 -36.96,-2.83 -53.61,-0.07 -99.3,-2.57 -153.96,-2.57l-475.63 7.2c-81.97,10.63 -167.97,17.18 -245.62,48.85 -39.98,16.3 -156.7,82.28 -188.32,106.15 -23.57,17.79 -43.11,34.65 -64.67,54.7l-30.48 27.87c-22.97,22.11 -74.34,65.17 -91.31,86.44 -17.63,22.09 -37.95,38.98 -55.7,61.02 -24.13,29.95 -30.25,34.15 -52.15,67.24 -51.44,77.71 -101,132.22 -132.21,223.27 -4.15,12.12 -10.07,30.7 -14.74,49.63 -8.22,33.24 -30.05,180.06 26.24,78.84z"/>
+
+   <path class="dg-body" d="M2892.73 500.67c0,125.69 42.82,179.95 -23.85,313.06 -8.32,16.61 -20.03,36.6 -32.53,49.72 -11.95,12.55 -1.31,4.78 -19.76,20.03 -24.07,19.89 -32.41,31.96 -68.73,55.96l-49.91 32.33c-51.66,30.64 -97.45,41.03 -100.73,42.84 -4.3,2.37 -3.18,0.12 -5,5.05 -4.25,11.48 -1.21,2.96 0.72,6.28 4.96,10.12 19.19,6.86 36.35,4.53 14.05,-1.9 29.23,-0.68 45.76,-2.01 95.77,-7.66 202.88,-46.01 280.23,-101.79l51.97 -43.54c4.64,-5.6 4.97,-7.26 10.77,-13.09 21.14,-21.26 62.37,-73.07 68.36,-98.77 6.86,3.29 22.38,8.96 30.82,11.62 88.16,27.78 155.18,-43.47 186.74,-107.11 47.42,-95.62 55.69,-152.57 55.69,-260 0,-70.15 -30.68,-154.43 -66.93,-187.75 -135.36,-124.47 -399.98,1.8 -399.98,272.65z"/>
+
+   <path class="dg-yellow" d="M2225.47 1681.2c7.75,-34.93 10.41,-80.85 16.27,-117.71 18.71,-117.41 55.46,-185.82 147.18,-256.08 127.17,-97.42 400.68,-151.01 579.56,-226.88 115.8,-49.12 238.04,-121.11 328.7,-207.25l36.57 -32.36c23.55,-19.75 45.16,-43.04 65.44,-67.22 9.44,-11.26 19.72,-24.46 25.58,-39.58 -19.39,5.73 -65.09,43.13 -82.57,56.86 -27.73,21.77 -51.77,42.09 -79.96,63.3 -28.14,21.17 -55.58,38.63 -86.17,57.09 -286.2,172.78 -568.9,123.99 -806.3,193.84 -37.07,10.9 -72.84,21.9 -103.99,39.26 -29.42,16.4 -59.02,38.65 -74.38,68.88l-31.03 75.08c-9.46,36.59 -1.42,126.66 3.56,166.51 5.25,41.94 12.38,82.39 20.64,122.61 3.94,19.16 9.13,37.6 14.76,56.87 4.43,15.14 12.01,39.59 26.12,46.79z"/>
+
+   <path class="dg-blue" d="M2266.64 1939.94c2.99,4.32 3.77,13.04 4.54,17.88 2.15,13.58 0.75,10.53 6.08,20.4 17.44,-20.27 17.62,-154.04 36.95,-225.59 74.93,-277.52 322.43,-374.44 562.25,-498.87 132.28,-68.62 302.37,-150.94 411.41,-251.8l201.48 -196.46c11.49,-13.19 17.96,-20.78 32.24,-34.08 26.38,-24.6 101.82,-115.12 126.97,-138.41 25.47,-23.6 67.91,-75.28 97.46,-101.45l150.88 -146.21c90.37,-76.74 183.62,-150.29 289.18,-209.63 86.14,-48.42 273.42,-145.22 393.13,-131.35 56.11,-19.21 103.06,-3.37 159.92,1.85 23.04,4.37 43.53,7.13 61.43,19.82 8.66,9.68 27.58,12.2 42.05,17.81l7.95 0.35c-25.17,-37.64 -140.96,-68.02 -200.83,-77.78 -87.15,-14.2 -174.4,-3.3 -249.63,17.24 -73.55,20.06 -177.67,66.18 -244.08,106.1 -142.81,85.85 -220.93,144.23 -347.67,246.58l-75.34 65.27c-7.88,8.02 -12.28,10.15 -19.91,17.23 -6.81,6.3 -9.92,10.85 -17.67,16.83l-36.72 32.26c-7.79,7.58 -12.42,10.36 -19.86,17.27 -22.27,20.71 -27.93,22.36 -54.37,49.1 -7.81,7.89 -12.37,10.17 -19.95,17.18 -12.34,11.42 -22.17,22.81 -34.4,34.57 -20.01,19.26 -51.64,45.21 -71.57,69.04 -11.93,14.28 -20.72,25.36 -33.8,39.01 -5.86,15.13 -16.14,28.33 -25.57,39.58 -20.3,24.19 -41.9,47.48 -65.45,67.23l-36.57 32.36c-90.67,86.14 -212.9,158.13 -328.69,207.25 -178.89,75.86 -452.4,129.46 -579.57,226.88 -91.72,70.26 -128.47,138.68 -147.18,256.09 -5.87,36.84 -8.53,82.78 -16.27,117.7 -2.12,11.35 -2.22,25 -0.89,36.75 8.29,73.29 13.43,150.81 42.05,222z"/>
+
+   <path class="dg-body" d="M4340.1 155.79l105.7 -46.62c89.47,-35.91 163.18,-42.28 264.26,-41.03 19.1,0.23 82.34,6.2 100.33,13.74 9.18,3.85 18.22,7.59 32.21,7.59 2.15,-3.5 3.51,3.19 0,-5.61 -14.46,-5.61 -33.39,-8.13 -42.04,-17.81 -4.62,6.85 -21.92,0.76 -29.77,-0.66 -10.44,-1.88 -20.82,-2.3 -31.6,-2.82 -74.62,-3.58 -121.11,-3.63 -195.44,11.67 -37.92,7.81 -74.43,19.54 -107.57,33.24l-92.59 45.79c-0.49,0.34 -1.34,0.97 -1.74,1.25 -0.4,0.27 -1.18,0.83 -1.74,1.27z"/>
+
+   <path class="dg-body" d="M5954.28 1317.5c29.55,48.35 127.76,177 7.49,93.75 -14.35,-9.92 -28.8,-19.68 -44.34,-27.01 -12.04,-5.67 -24.78,-9.91 -38.67,-11.67 -71.69,-12.75 -134.97,34.14 -182.46,82.22 -127.71,136.05 -236.88,309.9 -355.08,483.45 -351.45,516.07 -853.37,888.01 -1510.9,805.9 -78.75,-8.96 -155.08,-30.18 -227.29,-61.19 -29.73,-12.76 -107.88,-59.04 -181.6,-105.86 -28.79,-18.28 -57.65,-35.67 -81.88,-52.2 -64.39,-43.9 -58.16,-43.87 15.72,-44.89 37.49,-0.5 75.12,1.82 112.69,0.99 152.16,-5.2 304.43,-25.98 451.36,-66.13 61.31,-16.75 121.72,-36.91 180.78,-60.7 639.45,-251.48 1413,-1752.8 1854.19,-1036.65z"/>
+
+   <path class="dg-body" d="M5683.75 1765.54c114.66,-39.96 235.76,-13.71 346.41,29.74 17.4,6.83 34.59,14.11 51.41,21.61 33.98,15.1 86.72,50.22 116.59,72.08 42.52,31.11 -13.64,19.29 -139.91,56.21 -31.39,9.18 -58.41,29.8 -84.02,50.1 -106.41,92.04 -153.4,229.44 -241.99,335.75 -59.12,84.45 -130.12,160.18 -213.04,221.45 -97.71,80.4 -205.93,148.84 -324.9,193.18 -115.64,45.37 -235.93,81.51 -360.25,91.42 -185.3,16.81 -372.01,4.98 -556.08,-18.62 176.38,-42.22 360.56,-61.46 526.51,-139.42 142.87,-66.73 267.31,-170.71 362.17,-296.27 97.71,-115.63 169.09,-249.9 251.62,-376.16 67.02,-99.52 147.32,-201.49 265.48,-241.08z"/>
+
+   <path class="dg-body" d="M5464.03 2800.84c11.16,-9.87 21.87,-21.08 33.3,-31.14 3.99,-3.51 8.08,-6.88 12.3,-10.01 70.95,-52.54 28.63,46.86 15.65,80.05 -17.07,43.65 -39.47,85.68 -58.42,128.17 -64.8,135.58 -140.13,271.35 -257.29,369.06 -67.27,61.71 -159.68,79.02 -249.27,76.02 -237.86,-7.86 -581.06,-198.65 -793.73,-325.01 -129.38,-84.55 -269.93,-150.67 -412.39,-209.88 61.36,57.79 128.58,109.04 189.95,166.95 73.5,65.3 135.99,141.55 199.87,216.06 195.8,245.41 371.82,490.96 729.93,420.71 28.84,-5.02 57.48,-13.34 86.42,-18.92 10.81,-2.08 21.67,-3.78 32.58,-4.78 84.89,-7.78 -4.47,49.26 -32.11,67.5 -6.27,4.14 -12.55,8.27 -18.65,12.5 -107.74,69.86 -220.54,140.84 -350.13,159.37 -87.69,16.31 -173.65,-30.16 -237.02,-86.58 -48.55,-37.18 -95.81,-114.41 -131.71,-166.07 -78.28,-112.63 -176.34,-260.43 -215.9,-338.45 -50.22,-104.3 -119.17,-197.85 -185.6,-292.01 -29.37,-38.99 -56.5,-80.09 -91.63,-114.12 33.41,87.08 81.82,167.67 115.64,254.65 8.53,20.98 16.75,40.95 24.83,59.95 97.72,229.86 187.51,628.08 480.99,697.59 13.96,3.31 28.06,6.24 42.11,9.21 26.8,5.64 126.42,16.59 70.16,41.28 -23.23,10.18 -49.99,12.43 -74.58,17.88 -120.69,20.15 -251.01,37.56 -366.74,-12.65 -141.09,-82.93 -189.55,-472.98 -247.56,-750.37 -24,-129.61 -52.66,-262.76 -123.33,-375.75 -26.07,-23.16 -61.92,-30.74 -93.89,-45.12 -45.05,-20.27 -55.76,-37.59 3.89,-35.26 25.79,1.01 51.64,5.12 77.36,6.96 254.91,30.03 500.89,107.12 741.97,192.94 24.74,8.81 49.46,17.72 74.11,26.68 224,96.13 533.55,119.41 759.29,11.15 97.71,-45.26 174.56,-123.33 249.59,-198.56z"/>
+
+   <path class="dg-body" d="M4718.95 708.86c-50.31,63.87 -96.23,131.21 -128.73,206.06 -81.61,165.55 -144.89,339.3 -221.74,507.08 -22.88,54.47 -51.03,107.03 -68.44,163.62 70.28,-147.83 159.17,-285.83 238.65,-428.8 317.41,-508.07 682.83,-657.62 893.86,-589.9 131.8,41.03 239.14,131.81 322.22,240.29 25.6,33.42 48.92,68.54 69.92,104.38 24.28,44.28 44.15,80.23 59.3,108.49 84.16,156.95 -15.72,52.01 -74.62,2.94 -25.27,-21.04 -54.36,-36.39 -85.42,-47.33 -46.98,-16.52 -98.55,-22.98 -148.55,-23.91 -89.51,-3.14 -177,29.87 -249.69,80.5 -52.8,34.78 -100.29,75.73 -145.42,119.28 -169.97,163.94 -232.75,268.58 -377.33,444.05 -156.59,190.04 -327.69,368.46 -524.2,517.54 -149.65,114.31 -317.93,207.25 -499.98,257.88 -173.96,49.11 -362.28,52.66 -535.22,-2.12 -20.72,-6.68 -40.41,-15.74 -59.01,-26.62 -86.31,-50.48 -90.4,-54.07 -3.92,-59.6 156.8,-10.01 314.62,-39.07 452.77,-116.6 157.23,-86.06 287.65,-216.67 381,-369.16 57.93,-95.78 114.41,-195.12 142.97,-304.06 -24.29,6.48 -29.26,33.31 -40.3,52.35 -77.66,164.94 -184.68,317.33 -321.07,438.92 -188.64,164.22 -440.25,267.2 -692.66,246.55 -90.22,-7.5 -203.16,-58.01 -251.7,-141.58 -24.86,-42.84 -50.95,-104.27 14.27,-43.06 79.25,74.38 82.08,101.98 259.51,124.7 149.45,-1.73 297.78,-64.4 404.9,-168.28 472.71,-677.93 268.66,-1261.22 1262.7,-1524.47 511.49,-135.45 97.63,13.03 -74.06,230.86z"/>
+
+   <path class="dg-body" d="M288.41 3394.39c15.64,144.16 24.36,127.39 48.62,25.34 2.6,-10.96 8.66,-20.56 15.24,-29.46 31.96,-48.07 85.78,-51.01 131.86,-44.46 126.87,22.18 260.66,80.25 399.05,133.14 411.52,157.29 838.45,133.97 1147,-283.3 51.55,-68.15 90.36,-149.62 117.02,-237.59 4.1,-13.52 14.24,-54.9 24.79,-100.3 6.98,-30.05 14.49,-61.81 19.83,-88.56 10.04,-50.3 8.47,-54.18 -28.75,-13.34 -19.13,20.99 -38.8,41.8 -58.8,61.83 -1.8,1.76 -3.61,3.51 -5.4,5.25 -80.56,77.92 -167.72,145.65 -260.36,197.98 -39.52,22.33 -80.07,41.85 -121.52,58.16 -445.97,180.75 -1512.65,-413.66 -1428.58,315.3z"/>
+
+   <path class="dg-body" d="M627.55 3549.96c-95.11,43.94 -151.61,160.5 -192.81,271.75l-9.67 41.91 -9.7 42.01c-8.44,65.58 0.52,37.18 33.07,5.97 13.91,-13.35 31.74,-21.21 48.71,-28.55 25.45,-11.02 52.3,-17 79.28,-17.36 96.31,4.02 181.45,71.5 274.72,95 68.18,24.85 138.75,37.26 209.2,33.28 86.63,0.89 173.51,-12.12 255.41,-47.42 80.61,-32.76 159.58,-74.34 229.13,-135.96 104.55,-90.47 197.22,-201.15 283.33,-318.38 -111.06,68.29 -216.09,156.48 -337.42,194.77 -104.29,33.21 -215.32,31.01 -320.34,-2.11 -102.14,-24.81 -198.69,-76.76 -297.56,-117.14 -78.96,-30.76 -165.97,-55.86 -245.34,-17.79z"/>
+
+   <path class="dg-body" d="M1270.74 4247.38c55.75,33.61 113.51,65.21 173.14,85.7 40.54,13.93 81.98,22.72 124.26,23.51 62.45,4.94 118.51,-34.12 164.16,-85.41 121.24,-136.11 217.15,-454.38 272.99,-657.11 30.6,-128.56 75.16,-250.74 123.78,-369.28 -6.72,72.98 -19.4,144.75 -26.07,217.82 -9.78,84.77 -8.96,170.9 -9.63,256.63 5.42,274.34 21.28,537.89 -197.4,687.06 -62.14,44.63 -160.71,90.21 -10.99,75.75 87.25,-11.79 177.64,-25.58 253.74,-84.26 53.16,-37.13 77.76,-115.96 86.14,-189.11 9.07,-51.95 -0.16,-130.38 -4.08,-185.2 -8.56,-119.54 -22.24,-273.83 -35.86,-348.58 -19.6,-98.45 -24.65,-199.89 -31.3,-300.37 -1.77,-42.63 -5.65,-85.46 -2.21,-127.89 20.82,77.52 30.95,158.86 51.52,236.54 4.77,18.93 9.25,37.02 13.37,54.37 49.99,209.84 178.28,529.68 55.04,738.25 -58.13,98.37 -83.85,137.87 30.17,52.52 65.88,-49.28 131.83,-106.78 166.86,-195.58 37.44,-133.9 -108.92,-425.46 -200.66,-645.76 -44.49,-101.23 -88.1,-207.41 -100.82,-323.02 2.99,-25.87 14.86,-47.88 24.75,-70.93 39.11,-91.07 -9.6,-38.7 -38.11,-1.53 -4.06,5.3 -8.14,10.57 -12.33,15.65 -120.42,160.53 -215.42,348.13 -304.03,538.96 -9.09,19.59 -18.12,39.23 -27.11,58.87 -75.1,188.44 -227.14,374.44 -393.15,425.02 -53.01,17.12 -107.98,15.49 -162.51,9.49 -195.37,-21.48 -141.11,6.17 16.31,107.9z"/>
+
+   <path class="dg-body" d="M443.97 2237.22c-16.22,10.75 -32.53,21.58 -48.3,33.5 -62.32,47.12 -23.46,35.26 19.61,26.04 73.47,-15.71 126.08,-27.39 208.26,-6.81 69.57,17.43 139.14,39.17 202.7,81.07 115.68,67.58 225.37,150.8 339.55,222.5 35.98,24.42 73.88,44.64 107.93,73.49 -101.93,-61.75 -209.31,-106.62 -313.94,-160.02 -390.15,-170.58 -647.57,-71.25 -728.39,90.77 -66.76,131.25 -74.05,297.3 -53.8,449.7 4.02,23.72 7.52,47.67 11.37,71.55 32.41,201.03 32.81,66.7 53.16,-29.68 12.59,-59.63 46.4,-110.81 83.86,-151.62 45.55,-51.34 105.95,-77.02 166.36,-82.6 42.99,-5.4 85.92,-3.7 128.76,1.06 161.3,17.91 240.3,54.47 393.37,94.15 165.78,42.98 334.05,70.1 502.72,63.31 128.8,-4.64 257.95,-34.03 375.68,-99.72 112.82,-62.28 213.12,-163.41 279.66,-295.7 3.6,-7.23 6.87,-14.68 9.82,-22.3 59.15,-152.33 3.79,-85.04 -53.13,-37.11 -76.27,64.23 -159.29,116.08 -250.38,135.99 -120.33,27.99 -246.23,10.98 -362.31,-41.27 -72.55,-33.2 -145.91,-69.62 -208.86,-127.92 15.59,-8.95 30.01,6.56 44.19,13.4 113.34,69.33 236.56,114 361.62,121.62 171.21,7.82 348.46,-60.57 471.7,-213.37 40.33,-50.14 78.09,-140.49 71.49,-221.9 -1.06,-13.09 -2.99,-26.06 -6.8,-38.41 -12.64,-41 -17.31,-40.01 -19.83,1.84 -0.75,12.41 -0.63,24.06 -0.94,35.53 -1.4,50.3 -7.63,97.74 -81.89,194.36 -9.67,9.9 -19.73,19.17 -30.12,27.8 -74.68,61.97 -166.81,90.75 -256.26,80.51 -569.48,-209.05 -708.21,-752.48 -1416.86,-289.75z"/>
+
+  </g>
+
+ </g>
+
+                                </svg>
+
+                                <div class="sim-logo-text">DANZAS GUANTA</div>
+
+                                <div class="sim-logo-sub">PATRIMONIO CULTURAL</div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Láminas del Capítulo -->
+
+                <div class="logo-slide-grid">
+
+                    <div class="laminate-container" style="margin: 0;">
+
+                        <div class="laminate-frame" onclick="openLightbox(this)">
+
+                            <img src="medidas.png" alt="Cotizaciones y Medidas Oficiales" class="laminate-img zoomable">
+
+                            <div class="laminate-zoom-indicator">
+
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="laminate-caption">
+
+                            <span class="laminate-label">Lámina 06</span>
+
+                            <span class="laminate-desc">Esquema Técnico de Medidas</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="laminate-container" style="margin: 0;">
+
+                        <div class="laminate-frame" onclick="openLightbox(this)">
+
+                            <img src="manual_slide_08_area_proteccion.png" alt="Área de Seguridad Oficial" class="laminate-img zoomable">
+
+                            <div class="laminate-zoom-indicator">
+
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="laminate-caption">
+
+                            <span class="laminate-label">Lámina 07</span>
+
+                            <span class="laminate-desc">Normativa de Área de Exclusión en el Manual</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN VII: USOS PROHIBIDOS -->
+
+            <section id="usos-incorrectos">
+
+                <span class="section-label">Capítulo VII</span>
+
+                <h3 class="section-title">Usos Prohibidos y Restricciones</h3>
+
+                <div class="usos-intro">
+
+                    <p>La consistencia visual es clave para la consolidación institucional de Danzas Guanta. A continuación se detallan las malas praxis más comunes en la reproducción de la marca, las cuales están estrictamente vetadas.</p>
+
+                </div>
+
+
+
+                <!-- Grid de Casos Prohibidos Simulados -->
+
+                <div class="usos-grid">
+
+                    <!-- Deformación -->
+
+                    <div class="uso-card">
+
+                        <div class="uso-visual-box">
+
+                            <span class="uso-badge-prohibido">PROHIBIDO</span>
+
+                            <img src="usos_indebidos_distorsion.png" alt="Distorsión de proporción" class="uso-img">
+
+                        </div>
+
+                        <div class="uso-text">
+
+                            <h5>01. Distorsión de Proporción</h5>
+
+                            <p>No se permite deformar la escala vertical u horizontal de la silueta dancística de marca.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Contorneo -->
+
+                    <div class="uso-card">
+
+                        <div class="uso-visual-box">
+
+                            <span class="uso-badge-prohibido">PROHIBIDO</span>
+
+                            <img src="usos_indebidos_NO_contorno.png" alt="Uso de contorno no permitido" class="uso-img">
+
+                        </div>
+
+                        <div class="uso-text">
+
+                            <h5>02. Contornos Externos</h5>
+
+                            <p>No se permite agregar delineados, trazos periféricos o filetes alrededor del isotipo sólido.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Sombra Paralela -->
+
+                    <div class="uso-card">
+
+                        <div class="uso-visual-box">
+
+                            <span class="uso-badge-prohibido">PROHIBIDO</span>
+
+                            <img src="usos_indebidos_SOMBRA.png" alt="Uso de sombras e iluminación no permitidas" class="uso-img">
+
+                        </div>
+
+                        <div class="uso-text">
+
+                            <h5>03. Efectos y Sombras</h5>
+
+                            <p>Queda prohibido aplicar sombras paralelas toscas, biselados o efectos tridimensionales complejos.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Brillo y Contraste -->
+
+                    <div class="uso-card">
+
+                        <div class="uso-visual-box">
+
+                            <span class="uso-badge-prohibido">PROHIBIDO</span>
+
+                            <img src="usos_indebidos_brillo_contraste.png" alt="Bajo contraste o fondos inadecuados" class="uso-img">
+
+                        </div>
+
+                        <div class="uso-text">
+
+                            <h5>04. Brillo y Contraste</h5>
+
+                            <p>No se permite aplicar la marca sobre fondos sin el contraste necesario para garantizar su lectura y legibilidad.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Dislocación de Elementos -->
+
+                    <div class="uso-card">
+
+                        <div class="uso-visual-box">
+
+                            <span class="uso-badge-prohibido">PROHIBIDO</span>
+
+                            <img src="usos_indebidos_CAMBIAR_ELEMENTOS.png" alt="Reorganización de elementos no permitida" class="uso-img">
+
+                        </div>
+
+                        <div class="uso-text">
+
+                            <h5>05. Dislocación Espacial</h5>
+
+                            <p>No se permite reubicar la posición original relativa ni alterar las distancias del wordmark corporativo.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Rotación -->
+
+                    <div class="uso-card">
+
+                        <div class="uso-visual-box">
+
+                            <span class="uso-badge-prohibido">PROHIBIDO</span>
+
+                            <img src="usos_indebidos_GIRAR.png" alt="Inclinación o rotación del logotipo" class="uso-img">
+
+                        </div>
+
+                        <div class="uso-text">
+
+                            <h5>06. Rotación Desequilibrada</h5>
+
+                            <p>La marca siempre se debe reproducir a 0° de inclinación vertical; no incline el imagotipo.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            </section>
+
+
+
+            <!-- SECCIÓN VIII: PALETA CROMÁTICA (INTERACTIVA) -->
+
+            <section id="color">
+
+                <span class="section-label">Capítulo VIII</span>
+
+                <h3 class="section-title">Paleta Cromática</h3>
+
+                <div class="color-intro">
+
+                    <p>La paleta se inspira en el calor oriental y la nobleza institucional. Se compone de un color oro de acompañamiento premium y el tricolor nacional (amarillo, azul y rojo) adaptado a tonalidades de gran distinción. Haga clic en los códigos HEX para copiar.</p>
+
+                </div>
+
+
+
+                <!-- Paleta Interactiva de Colores -->
+
+                <div class="color-palette-grid">
+
+                    
+
+                    <!-- Amarillo -->
+
+                    <div class="color-card" onclick="copyHexColor('#FFE100')">
+
+                        <div class="color-block" style="background-color: #FFE100;">
+
+                            <div class="color-copy-overlay">Copiar HEX</div>
+
+                        </div>
+
+                        <div class="color-info">
+
+                            <div class="color-name-box">
+
+                                <h4>Amarillo</h4>
+
+                                <span>Primario</span>
+
+                            </div>
+
+                            <div class="color-values">
+
+                                <div class="color-val-row"><span class="color-val-label">HEX</span><span class="color-val-code">#FFE100</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">RGB</span><span class="color-val-code">255, 225, 0</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">CMYK</span><span class="color-val-code">0, 10, 100, 0</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Azul -->
+
+                    <div class="color-card" onclick="copyHexColor('#003399')">
+
+                        <div class="color-block" style="background-color: #003399;">
+
+                            <div class="color-copy-overlay">Copiar HEX</div>
+
+                        </div>
+
+                        <div class="color-info">
+
+                            <div class="color-name-box">
+
+                                <h4>Azul</h4>
+
+                                <span>Profundo</span>
+
+                            </div>
+
+                            <div class="color-values">
+
+                                <div class="color-val-row"><span class="color-val-label">HEX</span><span class="color-val-code">#003399</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">RGB</span><span class="color-val-code">0, 51, 153</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">CMYK</span><span class="color-val-code">100, 80, 0, 0</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Rojo -->
+
+                    <div class="color-card" onclick="copyHexColor('#E31E24')">
+
+                        <div class="color-block" style="background-color: #E31E24;">
+
+                            <div class="color-copy-overlay">Copiar HEX</div>
+
+                        </div>
+
+                        <div class="color-info">
+
+                            <div class="color-name-box">
+
+                                <h4>Rojo</h4>
+
+                                <span>Vibrante</span>
+
+                            </div>
+
+                            <div class="color-values">
+
+                                <div class="color-val-row"><span class="color-val-label">HEX</span><span class="color-val-code">#E31E24</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">RGB</span><span class="color-val-code">227, 30, 36</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">CMYK</span><span class="color-val-code">0, 95, 90, 0</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Negro -->
+
+                    <div class="color-card" onclick="copyHexColor('#0A0A0A')">
+
+                        <div class="color-block" style="background-color: #0A0A0A;">
+
+                            <div class="color-copy-overlay">Copiar HEX</div>
+
+                        </div>
+
+                        <div class="color-info">
+
+                            <div class="color-name-box">
+
+                                <h4>Negro</h4>
+
+                                <span>Principal</span>
+
+                            </div>
+
+                            <div class="color-values">
+
+                                <div class="color-val-row"><span class="color-val-label">HEX</span><span class="color-val-code">#0A0A0A</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">RGB</span><span class="color-val-code">10, 10, 10</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">CMYK</span><span class="color-val-code">0, 0, 0, 96</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Oro -->
+
+                    <div class="color-card" onclick="copyHexColor('#C5A880')">
+
+                        <div class="color-block" style="background-color: #C5A880;">
+
+                            <div class="color-copy-overlay">Copiar HEX</div>
+
+                        </div>
+
+                        <div class="color-info">
+
+                            <div class="color-name-box">
+
+                                <h4>Oro</h4>
+
+                                <span>Satinado</span>
+
+                            </div>
+
+                            <div class="color-values">
+
+                                <div class="color-val-row"><span class="color-val-label">HEX</span><span class="color-val-code">#C5A880</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">RGB</span><span class="color-val-code">197, 168, 128</span></div>
+
+                                <div class="color-val-row"><span class="color-val-label">CMYK</span><span class="color-val-code">10, 25, 45, 15</span></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- Diapositiva de Paleta de Colores del Manual -->
+
+                <div class="laminate-container">
+
+                    <div class="laminate-frame" onclick="openLightbox(this)">
+
+                        <img src="manual_slide_10_paleta_colores.png" alt="Diapositiva de Paleta de Colores del Manual" class="laminate-img zoomable">
+
+                        <div class="laminate-zoom-indicator">
+
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="laminate-caption">
+
+                        <span class="laminate-label">Lámina 09</span>
+
+                        <span class="laminate-desc">Lámina de Cromatismo del Manual de Identidad</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN IX: TIPOGRAFÍA -->
+
+            <section id="tipografia">
+
+                <span class="section-label">Capítulo IX</span>
+
+                <h3 class="section-title">Sistema Tipográfico</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    El sistema tipográfico consta de una fuente romana clásica para titulares y marcas secundarias que evoca prestigio cultural, secundada por una sans-serif geométrica contemporánea con alta legibilidad para lectura fluida.
+
+                </p>
+
+
+
+                <div class="typo-grid">
+
+                    <!-- Especímenes Tipográficos -->
+
+                    <div class="typo-showcase">
+
+                        <!-- Marcellus -->
+
+                        <div class="typo-card">
+
+                            <span class="section-label" style="font-size:0.6rem; margin-bottom:0;">Fuente Primaria (Títulos)</span>
+
+                            <span class="typo-title-specimen">Marcellus</span>
+
+                            <div class="typo-alphabet">
+
+                                A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z<br>
+
+                                a b c d e f g h i j k l m n ñ o p q r s t u v w x y z<br>
+
+                                0 1 2 3 4 5 6 7 8 9 ( . , ; : ? ! )
+
+                            </div>
+
+                            <p class="typo-meta">Tipografía inspirada en la solemnidad clásica romana. Se aplica en logotipos de acompañamiento, portadas, títulos y elementos estáticos de señalética premium.</p>
+
+                        </div>
+
+
+
+                        <!-- Plus Jakarta Sans -->
+
+                        <div class="typo-card">
+
+                            <span class="section-label" style="font-size:0.6rem; margin-bottom:0;">Fuente de Lectura (Cuerpo)</span>
+
+                            <span class="typo-sans-specimen">Plus Jakarta Sans</span>
+
+                            <div class="typo-alphabet">
+
+                                A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z<br>
+
+                                a b c d e f g h i j k l m n ñ o p q r s t u v w x y z<br>
+
+                                0 1 2 3 4 5 6 7 8 9 ( . , ; : ? ! )
+
+                            </div>
+
+                            <p class="typo-meta">Sans-serif geométrica con un matiz humanista y excelente rendimiento en entornos digitales. Se usa en párrafos de texto corrido, tablas técnicas, correspondencia oficial y web.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Slide de Tipografía -->
+
+                    <div class="laminate-container" style="margin:0;">
+
+                        <div class="laminate-frame" onclick="openLightbox(this)">
+
+                            <img src="manual_slide_11_tipografia.png" alt="Lámina de Tipografía Oficial" class="laminate-img zoomable">
+
+                            <div class="laminate-zoom-indicator">
+
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="laminate-caption">
+
+                            <span class="laminate-label">Lámina 10</span>
+
+                            <span class="laminate-desc">Ejemplo Tipografía en Papelería</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN X: APLICACIONES DE MARCA -->
+
+            <section id="aplicaciones">
+
+                <span class="section-label">Capítulo X</span>
+
+                <h3 class="section-title">Aplicaciones Corporativas</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    Propuesta representativa de aplicación de marca en papelería de correspondencia oficial y merchandising para embajadas y delegaciones culturales.
+
+                </p>
+
+
+
+                <div class="apps-grid">
+
+                    <!-- Tarjeta Corporativa -->
+
+                    <div class="app-spec-card">
+
+                        <div class="laminate-container" style="margin:0; border:none; box-shadow:none; border-radius:0; padding: 0.5rem;">
+
+                            <div class="laminate-frame" onclick="openLightbox(this)">
+
+                                <img src="manual_slide_12_aplicacion_tarjeta.png" alt="Mockup Tarjetas Corporativas" class="laminate-img zoomable" style="width: 140% !important; max-width: 950px !important; transform: scale(1.15); transition: transform 0.3s; z-index: 10; position: relative;">
+
+                                <div class="laminate-zoom-indicator">
+
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="app-spec-content">
+
+                            <span class="section-label" style="font-size:0.6rem; margin-bottom:0;">Papelería Administrativa</span>
+
+                            <h4 style="font-size: 1.25rem;">01. Tarjeta de Presentación</h4>
+
+                            <p style="font-size:0.85rem; margin-bottom:0;">Diseñada para la dirección y representantes internacionales. Se sugiere impresión sobre cartulina gofrada en seco de 350 gr con acabado mate y stamping dorado caliente en el isotipo.</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Bolsa Ecológica -->
+
+                    <div class="app-spec-card">
+
+                        <div class="laminate-container" style="margin:0; border:none; box-shadow:none; border-radius:0; padding: 0.5rem;">
+
+                            <div class="laminate-frame" onclick="openLightbox(this)">
+
+                                <img src="manual_slide_13_aplicacion_bolsa.png" alt="Mockup Bolsa Ecológica" class="laminate-img zoomable">
+
+                                <div class="laminate-zoom-indicator">
+
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="app-spec-content">
+
+                            <span class="section-label" style="font-size:0.6rem; margin-bottom:0;">Merchandising de Representación</span>
+
+                            <h4 style="font-size: 1.25rem;">02. Bolsa Ecológica (Tote Bag)</h4>
+
+                            <p style="font-size:0.85rem; margin-bottom:0;">Bolsa de lienzo crudo de algodón de alta resistencia para material promocional de festivales. Impresión a dos tintas (Oro corporativo satinado y negro de fondo) mediante serigrafía.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN XI: CANALES DE CONTACTO -->
+
+            <section id="contacto">
+
+                <span class="section-label">Capítulo XI</span>
+
+                <h3 class="section-title">Canales de Contacto</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    Para solicitudes administrativas, cesión de marca con fines promocionales, o copias vectoriales del imagotipo institucional (.SVG, .PDF, .AI), contactar con la dirección de relaciones institucionales.
+
+                </p>
+
+
+
+                <div class="contact-layout">
+
+                    <div class="contact-info-box">
+
+                        <div class="editorial-quote" style="padding: 2rem; margin-bottom: 1rem;">
+
+                            <p style="font-size:1.1rem; margin-bottom:0;">«Garantizar el respeto a la marca Danzas Guanta es salvaguardar visualmente el patrimonio de todo un municipio.»</p>
+
+                        </div>
+
+                        <ul class="contact-list">
+
+                            <li class="contact-item">
+
+                                <span class="contact-label">Sede Oficial</span>
+
+                                <span class="contact-value">Casa de la Cultura de Guanta, Estado Anzoátegui, Venezuela.</span>
+
+                            </li>
+
+                            <li class="contact-item">
+
+                                <span class="contact-label">Correo Electrónico Oficial</span>
+
+                                <span class="contact-value">danzasguanta@gmail.com</span>
+
+                            </li>
+
+                            <li class="contact-item">
+
+                                <span class="contact-label">Rango Legal</span>
+
+                                <span class="contact-value">Patrimonio Histórico Cultural Inmaterial (Acuerdo Cleanz 2025)</span>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="contact-img-box">
+
+                        <!-- Tarjeta de Contacto / Imagen -->
+
+                        <img src="contacto.png" alt="Información de Contacto de Danzas Guanta" class="contact-card-img">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SECCIÓN XII: CONTRAPORTADA -->
+
+            <section id="contraportada">
+
+                <span class="section-label">Capítulo XII</span>
+
+                <h3 class="section-title">Contraportada Oficial</h3>
+
+                <p style="max-width: 800px; margin-bottom: 3.5rem;">
+
+                    Contraportada oficial del manual que cierra las directrices institucionales de Danzas Guanta, sellando el compromiso con la excelencia cultural y la preservación del patrimonio.
+
+                </p>
+
+
+
+                <div class="laminate-container">
+
+                    <div class="laminate-frame" portrait onclick="openLightbox(this)">
+
+                        <img src="pagina_final_contra_portada_manual.png" alt="Contraportada Oficial del Manual" class="laminate-img zoomable">
+
+                        <div class="laminate-zoom-indicator">
+
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="laminate-caption">
+
+                        <span class="laminate-label">Lámina Final</span>
+
+                        <span class="laminate-desc">Contraportada de Cierre del Manual de Identidad Visual</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ==========================================================================
+
+       MODAL DE EXPANSIÓN FLOTANTE (Lightbox)
+
+       ========================================================================== -->
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+
+        <div class="lightbox-wrapper" onclick="event.stopPropagation()">
+
+            <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+
+            <img class="lightbox-content" id="lightbox-img" src="" alt="Lámina ampliada">
+
+            <div class="lightbox-caption" id="lightbox-caption">Lámina de Identidad</div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================================================
+
+       NOTIFICACIÓN TOAST (Copiado de colores)
+
+       ========================================================================== -->
+
+    <div class="toast" id="toast">
+
+        <div class="toast-ping"></div>
+
+        <span class="toast-text" id="toast-text">Código HEX copiado al portapapeles.</span>
+
+    </div>
+
+
+
+    <!-- ==========================================================================
+
+       SCRIPT DE LÓGICA INTERACTIVA Y TEMA
+
+       ========================================================================== -->
+
+    <script>
+
+        // ==========================================================================
+
+        // 1. GESTIÓN DEL MODO OSCURO / CLARO
+
+        // ==========================================================================
+
+        function initTheme() {
+
+            // Se lee el local storage, por defecto se asume oscuro (Premium look)
+
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+
+            if (savedTheme === 'dark') {
+
+                document.body.classList.add('dark-mode');
+
+                document.getElementById('theme-status-text').textContent = 'Modo Claro';
+
+            } else {
+
+                document.body.classList.remove('dark-mode');
+
+                document.getElementById('theme-status-text').textContent = 'Modo Oscuro';
+
+            }
+
+        }
+
+
+
+        function toggleDarkMode() {
+
+            const body = document.body;
+
+            const textStatus = document.getElementById('theme-status-text');
+
+            
+
+            body.classList.toggle('dark-mode');
+
+            const isDark = body.classList.contains('dark-mode');
+
+            
+
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+            textStatus.textContent = isDark ? 'Modo Claro' : 'Modo Oscuro';
+
+            
+
+            showToast('Tema cambiado con éxito.');
+
+        }
+
+
+
+        // ==========================================================================
+
+        // 2. NAVEGACIÓN Y MENÚ MÓVIL
+
+        // ==========================================================================
+
+        function toggleSidebar() {
+
+            const sidebar = document.getElementById('sidebar');
+
+            sidebar.classList.toggle('open');
+
+        }
+
+
+
+        function closeSidebar() {
+
+            const sidebar = document.getElementById('sidebar');
+
+            sidebar.classList.remove('open');
+
+        }
+
+
+
+        // Highlight de navegación activa según la posición de scroll
+
+        const sections = document.querySelectorAll('section');
+
+        const navLinks = document.querySelectorAll('.nav-link');
+
+
+
+        window.addEventListener('scroll', () => {
+
+            let current = '';
+
+            sections.forEach(section => {
+
+                const sectionTop = section.offsetTop - 120;
+
+                const sectionHeight = section.clientHeight;
+
+                if (window.pageYOffset >= sectionTop) {
+
+                    current = section.getAttribute('id');
+
+                }
+
+            });
+
+
+
+            navLinks.forEach(link => {
+
+                link.classList.remove('active');
+
+                if (link.getAttribute('href').substring(1) === current) {
+
+                    link.classList.add('active');
+
+                }
+
+            });
+
+        });
+
+
+
+        // ==========================================================================
+
+        // 3. SIMULADOR INTERACTIVO DEL ÁREA DE EXCLUSIÓN
+
+        // ==========================================================================
+
+        const inputScale = document.getElementById('input-logo-scale');
+
+        const inputMargin = document.getElementById('input-safe-margin');
+
+        const checkGrid = document.getElementById('checkbox-grid');
+
+        const checkSafe = document.getElementById('checkbox-safe');
+
+
+
+        const valScale = document.getElementById('val-logo-scale');
+
+        const valMargin = document.getElementById('val-safe-margin');
+
+
+
+        const simLogoContainer = document.getElementById('sim-logo-container');
+
+        const simLogoWrapper = document.getElementById('sim-logo-wrapper');
+
+        const layerGrid = document.getElementById('layer-grid');
+
+        const layerSafe = document.getElementById('layer-safe');
+
+        const layerSafeText = document.getElementById('layer-safe-text');
+
+
+
+        function updateSimulator() {
+
+            const scale = parseFloat(inputScale.value);
+
+            const margin = parseFloat(inputMargin.value);
+
+
+
+            // Actualizar lecturas en pantalla
+
+            valScale.textContent = scale.toFixed(2) + 'x';
+
+            valMargin.textContent = margin.toFixed(2) + 'X';
+
+
+
+            // Escalar el logo
+
+            simLogoContainer.style.transform = `scale(${scale})`;
+
+
+
+            // Calcular el padding en píxeles
+
+            // El módulo base X es 18px (diámetro relativo de la cabeza del isotipo a escala normal)
+
+            const baseX = 18; 
+
+            const pxPadding = Math.round(margin * baseX * scale);
+
+            
+
+            // Asignar padding al wrapper para simular el área físicamente
+
+            simLogoWrapper.style.padding = `${pxPadding}px`;
+
+
+
+            // Control de visibilidad de capas auxiliares
+
+            if (checkGrid.checked) {
+
+                layerGrid.classList.add('visible');
+
+            } else {
+
+                layerGrid.classList.remove('visible');
+
+            }
+
+
+
+            if (checkSafe.checked) {
+
+                layerSafe.classList.add('visible');
+
+                layerSafeText.textContent = `ZONA DE EXCLUSIÓN (${margin.toFixed(2)}X = ${Math.round(margin * baseX * scale)}px)`;
+
+            } else {
+
+                layerSafe.classList.remove('visible');
+
+            }
+
+        }
+
+
+
+        // Enlazar eventos de sliders y checkboxes
+
+        inputScale.addEventListener('input', updateSimulator);
+
+        inputMargin.addEventListener('input', updateSimulator);
+
+        checkGrid.addEventListener('change', updateSimulator);
+
+        checkSafe.addEventListener('change', updateSimulator);
+
+
+
+        // ==========================================================================
+
+        // 4. COPIAR COLORES AL PORTAPAPELES
+
+        // ==========================================================================
+
+        function copyHexColor(hexValue) {
+
+            navigator.clipboard.writeText(hexValue).then(() => {
+
+                showToast(`HEX ${hexValue} copiado al portapapeles.`);
+
+            }).catch(err => {
+
+                console.error('No se pudo copiar el color: ', err);
+
+            });
+
+        }
+
+
+
+        // ==========================================================================
+
+        // 5. TOAST DE NOTIFICACIÓN
+
+        // ==========================================================================
+
+        let toastTimeout;
+
+        function showToast(text) {
+
+            const toast = document.getElementById('toast');
+
+            const toastText = document.getElementById('toast-text');
+
+            
+
+            toastText.textContent = text;
+
+            toast.classList.add('visible');
+
+            
+
+            clearTimeout(toastTimeout);
+
+            toastTimeout = setTimeout(() => {
+
+                toast.classList.remove('visible');
+
+            }, 3000);
+
+        }
+
+
+
+        // ==========================================================================
+
+        // 6. GALERÍA DE IMÁGENES LIGHTBOX (MODAL DE LÁMINAS)
+
+        // ==========================================================================
+
+        function openLightbox(frameElement) {
+
+            const img = frameElement.querySelector('.laminate-img');
+
+            const lightbox = document.getElementById('lightbox');
+
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            const lightboxCap = document.getElementById('lightbox-caption');
+
+
+
+            lightboxImg.src = img.src;
+
+            lightboxImg.alt = img.alt;
+
+            lightboxCap.textContent = img.alt;
+
+
+
+            lightbox.classList.add('active');
+
+            document.body.style.overflow = 'hidden'; // Detener scroll de fondo
+
+        }
+
+
+
+        function closeLightbox() {
+
+            const lightbox = document.getElementById('lightbox');
+
+            lightbox.classList.remove('active');
+
+            document.body.style.overflow = ''; // Restaurar scroll
+
+        }
+
+
+
+        // Soporte para cerrar lightbox con tecla Escape
+
+        document.addEventListener('keydown', (e) => {
+
+            if (e.key === 'Escape') {
+
+                closeLightbox();
+
+            }
+
+        });
+
+
+
+        // ==========================================================================
+
+        // INICIALIZACIÓN
+
+        // ==========================================================================
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            initTheme();
+
+            updateSimulator();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
